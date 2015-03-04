@@ -1,0 +1,3 @@
+[submodule "wp-content/themes/ngTheme"]
+	path = wp-content/themes/ngTheme
+	url = ../../hugoleandersson/ngTheme.git
