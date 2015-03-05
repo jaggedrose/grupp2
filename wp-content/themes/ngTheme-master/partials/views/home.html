@@ -1,0 +1,13 @@
+<section class="container">
+  <div class="row">
+    <article class="col-xs-12 col-sm-10 col-md-8 col-lg-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-2 col-lg-offset-2">
+      <h2>Hello World!</h2>
+      <p>You probably want to start by reading the <a href="http://wp-api.org/guides/getting-started.html" target="_blank">WP JSON REST API documentation.</a></p>
+    </article>
+  </div>
+  <!-- 
+    here we output the html that we have told Angular to trust
+    using $sce.trustAsHtml. We cannot use {{}} for HTML strings 
+  -->
+  <div class="row" ng-bind-html="trustedHtml"></div>
+</section>

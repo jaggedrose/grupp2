@@ -1,0 +1,34 @@
+@import url("../bootstrap_less/bootstrap.less");
+
+
+/*
+  Theme Name: ngTheme Theme
+  Description: This is a theme built for Angular
+  Text Domain: ngtheme
+  Version: 1.0
+
+  Inspired by: https://1fix.io/blog/2014/11/05/angularjs-json-api-wp-theme/
+*/
+
+/* ngBootrap css fix */
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+/* Sticky footer */
+html, body {
+  height: 100%;
+}
+main {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -142px; 
+}
+main:after {
+  content: "";
+  display: block;
+}
+footer, main:after {
+  height: 142px; 
+}
+footer {
+  background: orange;
+}
