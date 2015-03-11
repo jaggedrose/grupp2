@@ -6544,13 +6544,6 @@ button.close {
 .panel-title a {
   cursor: pointer;
 }
-/* header banner background img */
-.headerBanner {
-  height: 200px;
-  background-position: 50% 40%;
-  background-repeat: no-repeat;
-  border-radius: 4px;
-}
 /* Sticky footer */
 html,
 body {
@@ -6572,4 +6565,12 @@ main:after {
 footer {
   background: orange;
 }
-
+.navbar .brand {
+  max-height: 50px;
+  overflow: visible;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.navbar a.navbar-brand {
+  padding: 0 15px 0;
+}
