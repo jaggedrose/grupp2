@@ -6553,6 +6553,7 @@ main {
   min-height: 100%;
   /* equal to footer height */
   margin-bottom: -142px;
+  margin-top: 95px;
 }
 main:after {
   content: "";
@@ -6565,12 +6566,15 @@ main:after {
 footer {
   background: #C97A0D;
 }
-.navbar .brand {
-  max-height: 50px;
-  overflow: visible;
-  padding-top: 0;
-  padding-bottom: 0;
+.logo {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
-.navbar a.navbar-brand {
-  padding: 0 15px 0;
+.nav-center {
+  margin: 0;
+  float: none;
+}
+.navbar-inner {
+  text-align: center;
 }
