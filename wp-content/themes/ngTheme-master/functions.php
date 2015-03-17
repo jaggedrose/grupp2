@@ -205,4 +205,64 @@ if ( function_exists( 'register_nav_menus' ) ) {
     );
 }
 
+
 add_action( 'tgmpa_register', 'ngTheme_register_required_plugins' );
+
+
+
+function property_init() {
+  register_taxonomy(
+    'property',
+    'attachment',
+    array(
+      'label' => __('property'),
+      'rewrite' => array( 'slug' => 'property' ),
+
+      )
+    );
+}
+
+add_action('init', 'property_init');
+
+function ngwp_add_property_tax_to_posts() {
+  register_taxonomy_for_object_type( 'property', 'post');
+}
+
+add_action('init' , 'ngwp_add_property_tax_to_posts');
+
+//Wordpress metadata
+
+
+
+function addMetaSearch() {
+  global $wp;
+
+
+  array_push($wp->public_query_vars, 'meta_key');
+  array_push($wp->public_query_vars, 'meta_value');
+}
+add_action("init", "addMetaSearch");
+
+
+add_filter( 'json_prepare_post', function ($data, $post, $context) {
+  /*
+    stad
+    bostadstyp
+    pris
+    hyra
+    rum
+    yta_m2
+    badkar
+  */
+ 
+  $data['banan_data'] = array(
+    'stad' => get_post_meta( $post['ID'], 'stad', true ),
+    'bostadstyp' => get_post_meta( $post['ID'], 'bostadstyp', true ),
+    'pris' => get_post_meta( $post['ID'], 'pris', true ),
+    'hyra' => get_post_meta( $post['ID'], 'hyra', true ),
+    'rum' => get_post_meta( $post['ID'], 'rum', true ),
+    'yta_m2' => get_post_meta( $post['ID'], 'yta_m2', true ),
+    'badkar' => get_post_meta( $post['ID'], 'badkar', true ),
+  );
+  return $data;
+}, 7, 3 );
