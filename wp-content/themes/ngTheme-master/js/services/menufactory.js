@@ -1,12 +1,12 @@
-// .factory() service for "Menus" rest calls.
+// .factory() service for "Menus" rest call.
 app.factory("Menus", ["WPRest", "SITE_INFO", function(WPRest, SITE_INFO) {
 
-	//our old friend from bootstrap_play
+	// Using Menu tree function from bootstrap_play
 	function createMenuTree(menuLinkArr) {
 		// The menu tree (our new deep structure)
 		var menuTree = [];
 
-		// sort by weight
+		// Sort by order
 		menuLinkArr.sort(function(x,y){
 		return x.order > y.order;
 		});
