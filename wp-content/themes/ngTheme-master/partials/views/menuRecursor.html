@@ -5,7 +5,7 @@
     Note that goTo() is a $scope method coming from our parent $scope 
     (header view), it is never redefined inside this view!
   -->
-  <a href="" ng-click="goTo(link.url)">{{link.title}}</a>
+  <a href="" ng-click="goTo('pages/'+link.url)">{{link.title}}</a>
 
 
   <!-- 
