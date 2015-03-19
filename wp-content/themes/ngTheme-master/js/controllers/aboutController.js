@@ -6,6 +6,6 @@ app.controller("aboutController", ["$scope", "Pages", "$sce", "$routeParams", fu
 	// Check for broadcast
 	$scope.$on("gotPageData", function(event, data) {
 		console.log("aboutController on gotPageData: ", data);
-		$scope.allPages = data;
+		$scope.page = data[0];
 	});
 }]);

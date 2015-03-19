@@ -12,6 +12,10 @@ app.config(["$routeProvider", "$locationProvider", "SITE_INFO", function($routeP
       templateUrl: SITE_INFO.partials+"views/about.html",
       controller: "aboutController"
     })
+    .when("/pages/:slug", {
+      templateUrl: SITE_INFO.partials+"views/contact.html",
+      controller: "contactController"
+    })
     .otherwise({
       redirectTo: "/"
     });
