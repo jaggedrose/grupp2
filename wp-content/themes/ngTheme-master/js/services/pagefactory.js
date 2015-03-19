@@ -1,10 +1,26 @@
 //our .factory() service for "Pages" rest calls
-app.factory("Pages", ["WPRest", function (WPRest) {
+app.factory("Pages", ["WPRest", "$sce", function (WPRest, $sce) {
   //in a .factory() service object literal syntax is required
   var pageServant = {
-    get : function(pageId) {
-      var callUrl = pageId ? "/pages/"+pageId : "/pages";
-      WPRest.restCall(callUrl, "GET", {}, "gotPageData");
+    get : function(pageSlug) {
+      var callUrl = pageSlug ? "/pages?filter[name]="+pageSlug : "/pages";
+
+      WPRest.restCall(callUrl, "GET", {}, {
+        broadcastName : "gotPageData",
+        callback : function(data) {
+          // Make html trusted, to make angular happy
+          if (data.constructor.name == "Array") {
+            data.forEach(function(item) {
+              item.excerpt = $sce.trustAsHtml(item.excerpt);
+              item.content = $sce.trustAsHtml(item.content);
+            });
+          } else {
+            data.excerpt = $sce.trustAsHtml(data.excerpt);
+            data.content = $sce.trustAsHtml(data.content);
+          }
+          return data;
+        }
+      });
     },
     post : function(data) {
       var callUrl = "/pages";
