@@ -16,6 +16,10 @@ app.config(["$routeProvider", "$locationProvider", "SITE_INFO", function($routeP
       templateUrl: SITE_INFO.partials+"views/contact.html",
       controller: "contactController"
     })
+    .when("/bostad/:name", {
+      templateUrl: SITE_INFO.partials+"views/bostad.html",
+      controller: "bostadController"
+    })
     .otherwise({
       redirectTo: "/"
     });
