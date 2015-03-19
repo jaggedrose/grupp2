@@ -12,7 +12,7 @@ if (count($themeDir) > 1) {
 define(THEME_FILE_ROOT, trailingslashit($themeDir));
 define(THEME_HTTP_ROOT, trailingslashit(get_template_directory_uri()));
 
-
+remove_action('template_redirect', 'redirect_canonical');
 
 /**
  * Register the required stylesheets for this theme.
@@ -210,22 +210,22 @@ add_action( 'tgmpa_register', 'ngTheme_register_required_plugins' );
 
 
 
-function property_init() {
+function bostad_init() {
   register_taxonomy(
-    'property',
+    'bostad',
     'attachment',
     array(
-      'label' => __('property'),
-      'rewrite' => array( 'slug' => 'property' ),
+      'label' => __('bostad'),
+      'rewrite' => array( 'slug' => 'bostad' ),
 
       )
     );
 }
 
-add_action('init', 'property_init');
+add_action('init', 'bostad_init');
 
 function ngwp_add_property_tax_to_posts() {
-  register_taxonomy_for_object_type( 'property', 'post');
+  register_taxonomy_for_object_type( 'bostad', 'post');
 }
 
 add_action('init' , 'ngwp_add_property_tax_to_posts');
