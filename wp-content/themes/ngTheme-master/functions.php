@@ -208,7 +208,7 @@ if ( function_exists( 'register_nav_menus' ) ) {
 }
 
 
-function bostad_init() {
+function property_init() {
   register_taxonomy(
     'bostad',
     'attachment',
@@ -220,7 +220,7 @@ function bostad_init() {
     );
 }
 
-add_action('init', 'bostad_init');
+add_action('init', 'property_init');
 
 function ngwp_add_property_tax_to_posts() {
   register_taxonomy_for_object_type( 'bostad', 'post');
