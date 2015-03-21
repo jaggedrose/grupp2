@@ -16,9 +16,13 @@ app.config(["$routeProvider", "$locationProvider", "SITE_INFO", function($routeP
       templateUrl: SITE_INFO.partials+"views/contact.html",
       controller: "contactController"
     })
-    .when("/bostad/:name", {
+    .when("/bostad/:bostad", {
       templateUrl: SITE_INFO.partials+"views/bostad.html",
       controller: "bostadController"
+    })
+    .when("/search", {
+      templateUrl: SITE_INFO.partials+"views/bostadsLista.html",
+      controller: "bostadListController"
     })
     .otherwise({
       redirectTo: "/"

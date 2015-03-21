@@ -196,6 +196,8 @@ function ngTheme_register_required_plugins() {
  
 }
 
+add_action( 'tgmpa_register', 'ngTheme_register_required_plugins' );
+
 add_theme_support( 'menus' );
 if ( function_exists( 'register_nav_menus' ) ) {
     register_nav_menus(
@@ -204,10 +206,6 @@ if ( function_exists( 'register_nav_menus' ) ) {
       )
     );
 }
-
-
-add_action( 'tgmpa_register', 'ngTheme_register_required_plugins' );
-
 
 
 function bostad_init() {
@@ -255,7 +253,7 @@ add_filter( 'json_prepare_post', function ($data, $post, $context) {
     badkar
   */
  
-  $data['banan_data'] = array(
+  $data['bostad_data'] = array(
     'stad' => get_post_meta( $post['ID'], 'stad', true ),
     'bostadstyp' => get_post_meta( $post['ID'], 'bostadstyp', true ),
     'pris' => get_post_meta( $post['ID'], 'pris', true ),
