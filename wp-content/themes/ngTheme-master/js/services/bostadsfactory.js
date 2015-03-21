@@ -11,13 +11,13 @@ app.factory("Bostad", ["WPRest", "$sce", function(WPRest, $sce) {
 			for (var i in searchParams) {
 				callUrl += "&filter["+i+"]="+searchParams[i];
 			}
-			console.log("Hitta bostad metoden ropar på REST url: ", callUrl);
+			//console.log("Hitta bostad metoden ropar på REST url: ", callUrl);
 
 			WPRest.restCall(callUrl, "GET", {}, {
 				broadcastName: "KEBAAHB",
 				callback: function(postData) {
 
-					console.log("Bostad hittade bostad posts: ", postData);
+					console.log("Bostad hittade bostad post: ", postData);
 
 					var resultsToBroadcast = [];
 
