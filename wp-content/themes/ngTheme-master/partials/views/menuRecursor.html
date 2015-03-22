@@ -1,30 +1,15 @@
 <!-- using ng-class to add classes conditionally -->
 <li ng-repeat="link in menuLinks" ng-class="{true: 'dropdown', false:''}[link.children.length > 0]">
 
-  <!-- 
-    Note that goTo() is a $scope method coming from our parent $scope 
-    (header view), it is never redefined inside this view!
-  -->
-  <a href="" ng-click="goTo('pages/'+link.url)">{{link.title}}</a>
+  <!-- If not "Home" make a normal menu link -->
+  <a href="" ng-click="goTo('pages/'+link.url)" ng-if="link.url != ''">{{link.title}}</a>
+  <!-- But if menu link is "Home" replace with house icon -->
+  <a href="" class="glyphicon glyphicon-home" ng-click="goTo('pages/'+link.url)" ng-if="link.url == ''"></a>
 
-
-  <!-- 
-    End/start of recursive view!
-
-    "if this specific link has children"
-
-    include the menuRecursor view again, using $scope.partialsDir value 
-    (from parent view $scope) + the string "views/menuRecursor.html", 
-    but change the value of $scope.menuLinks to link.children 
-    (will only affect this view "instance", $scopes are localised!)
-
-    The new view will now have a different value on 
-    $scope.menuLinks but share all other $scope properties with it's 
-    parent view (including goTo(), which is defined in the 
-    header views $scope.
-
-    Note: Still no controller assigned!
+  <!-- End/start of recursive view!
+      Note: Still no controller assigned!
   -->
   <ul class="dropdown-menu" ng-if="link.children.length > 0" ng-include="partialsDir+'views/menuRecursor.html'" ng-init="menuLinks = link.children">
   </ul>
 </li>
+
