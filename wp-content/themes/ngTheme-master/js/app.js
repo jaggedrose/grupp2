@@ -8,13 +8,17 @@ app.config(["$routeProvider", "$locationProvider", "SITE_INFO", function($routeP
       templateUrl: SITE_INFO.partials+"views/home.html",
       controller: "homeController"
     })
-    .when("/pages/:om oss", {
+    .when("/pages/:slug", {
       templateUrl: SITE_INFO.partials+"views/about.html",
       controller: "aboutController"
     })
-    .when("/pages/:kontakt", {
+    .when("/pages/:slug", {
       templateUrl: SITE_INFO.partials+"views/contact.html",
       controller: "contactController"
+    })
+    .when("/pages/:slug", {
+      templateUrl: SITE_INFO.partials+"views/contact.html",
+      controller: "tillSaluController"
     })
     .when("/bostad/:name", {
       templateUrl: SITE_INFO.partials+"views/bostad.html",
