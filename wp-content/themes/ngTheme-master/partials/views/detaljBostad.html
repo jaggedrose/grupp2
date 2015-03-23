@@ -9,4 +9,13 @@
     </slide>
   </carousel>
   <div ng-bind-html="bostad.post.content"></div>
+  <table class="table">
+    <tr>
+      <th ng-repeat="(key,val) in bostad.bostadData">{{key}}</th>
+
+    </tr>
+    <tr>
+      <td ng-repeat="(key,val) in bostad.bostadData">{{val}}</td>
+    </tr>
+  </table>
 </div>
