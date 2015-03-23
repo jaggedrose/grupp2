@@ -10,14 +10,16 @@
       <!-- Table -->
       <table class="table">
         <tr>
-          <th>Rubrik:</th>
-          <th>InfoUtdrag:</th>
-          <th>Inlägg:</th>
+          <th>Fastigheter:</th>
+          <th>Bild:</th>
+          <th>Info:</th>
+          <th>Gå till:</th>
         </tr>
         <tr ng-repeat="model in bostadModels">
           <td>{{model.post.title}}</td>
+          <td><img ng-src="./wp-content/uploads/2015/03/hus8-150x150.jpg" style="margin:4px auto 0;" class="img-responsive img-rounded"></td>
           <td><div ng-bind-html="model.post.excerpt"></div></td>
-          <td><button class="btn btn-sm btn-success" ng-click="goTo('bostad/'+model.post.slug)">All info</button></td>
+          <td><button class="btn btn-sm btn-success" ng-click="goTo('bostad/'+model.post.slug)">Mer info</button></td>
         </tr>
       </table>
     </div>

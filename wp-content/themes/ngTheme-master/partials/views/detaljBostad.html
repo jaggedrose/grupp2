@@ -1,21 +1,28 @@
-<div class="col-xs-12 col-sm-12  col-md-12 col-lg-12">
-  <h2>{{bostad.post.title}}</h2>
-  <carousel interval="carouselInterval" class="container-fluid" style="height:700px; overflow:visible;">
-    <slide ng-repeat="media in bostad.media" active="media.active">
-      <img ng-src="{{media.source}}" style="margin:auto;" class="img-responsive">
-      <div class="carousel-caption">
-        <h4>{{media.title}}</h4>
-      </div>
-    </slide>
-  </carousel>
-  <div ng-bind-html="bostad.post.content"></div>
-  <table class="table">
-    <tr>
-      <th ng-repeat="(key,val) in bostad.bostadData">{{key}}</th>
+<section class="container-fluid ">
+  <div class="row">
 
-    </tr>
-    <tr>
-      <td ng-repeat="(key,val) in bostad.bostadData">{{val}}</td>
-    </tr>
-  </table>
-</div>
+    <h2>{{bostad.post.title}}</h2>
+    <section class="col-xs-12 col-sm-10 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-0">
+      <table class="table" style="">
+      <tr>
+        <th style="background-color:#fcfbf9;" ng-repeat="(key,val) in bostad.bostadData">{{key}}</th>
+      </tr>
+      <tr>
+        <td ng-repeat="(key,val) in bostad.bostadData">{{val}}</td>
+      </tr>
+    </table>
+    <div ng-bind-html="bostad.post.content" style="margin-top:15px; float:left; line-height:20px; background-color:#fcfbf9;padding:8px 0 0 8px;"></div>
+  </section>
+
+   <section class="col-xs-12 col-sm-10 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-0">
+      <carousel interval="carouselInterval" class="container-fluid" style="height:600px; overflow:hidden;">
+        <slide ng-repeat="media in bostad.media" active="media.active">
+          <img ng-src="{{media.source}}" style="margin:auto;" class="img-responsive img-rounded">
+          <div class="carousel-caption">
+            <h4>{{media.title}}</h4>
+          </div>
+        </slide>
+      </carousel>
+    </section>
+  </div>
+</section>

@@ -17,7 +17,7 @@ app.config(["$routeProvider", "$locationProvider", "SITE_INFO", function($routeP
       controller: "contactController"
     })
     .when("/pages/:slug", {
-      templateUrl: SITE_INFO.partials+"views/contact.html",
+      templateUrl: SITE_INFO.partials+"views/tillSalu.html",
       controller: "tillSaluController"
     })
     .when("/bostad/:name", {
