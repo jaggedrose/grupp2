@@ -8,7 +8,7 @@ app.config(["$routeProvider", "$locationProvider", "SITE_INFO", function($routeP
       templateUrl: SITE_INFO.partials+"views/home.html",
       controller: "homeController"
     })
-    .when("/pages/:om-oss", {
+    .when("/pages/:om oss", {
       templateUrl: SITE_INFO.partials+"views/about.html",
       controller: "aboutController"
     })
