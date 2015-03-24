@@ -1,12 +1,14 @@
 <section class="container">
+<!--
   <div class="row">
-    <article class="col-xs-12 col-sm-10 col-md-8 col-lg-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-2 col-lg-offset-2">
+     <article class="col-xs-12 col-sm-10 col-md-8 col-lg-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-2 col-lg-offset-2">
       <h2>Hello World!</h2>
       <p>You probably want to start by reading the <a href="http://wp-api.org/guides/getting-started.html" target="_blank">WP JSON REST API documentation.</a></p>
-    </article>
+    </article>   
   </div>
+  -->
   <article ng-repeat="page in pages" class="col-xs-12 col-sm-10 col-md-8 col-lg-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-2 col-lg-offset-2">
     <h2>{{page.title}}</h2>
-    <div ng-bind-html="page.content"></div>
+    <div class="content" ng-bind-html="page.content"></div>
   </article>
 </section>

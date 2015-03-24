@@ -271,7 +271,7 @@ function ngTheme_widgets_init() {
   register_sidebar( array(
     'name'          => __( 'Widget Area', 'ngTheme' ),
     'id'            => 'sidebar-1',
-    'description'   => __( 'Add widgets here to appear in your sidebar.', 'twentyfifteen' ),
+    'description'   => __( 'Add widgets here to appear in your sidebar.', 'ngTheme' ),
     'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     'after_widget'  => '</aside>',
     'before_title'  => '<h2 class="widget-title">',
