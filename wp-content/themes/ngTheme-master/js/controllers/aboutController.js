@@ -1,7 +1,7 @@
 app.controller("aboutController", ["$scope", "Pages", "$sce", "$routeParams", function($scope, Pages, $sce, $routeParams) {
 	console.log("aboutController Working! routeParams: ", $routeParams);
 	// Get the page
-	Pages.get($routeParams.slug);
+	Pages.get("om-oss");
 
 	// Check for broadcast
 	$scope.$on("gotPageData", function(event, data) {
