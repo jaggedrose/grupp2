@@ -97,7 +97,7 @@ CREATE TABLE IF NOT EXISTS `wp_options` (
 --
 
 INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`) VALUES
-(1, 'siteurl', 'http://localhost/grupp2', 'yes'),
+(1, grupp2, 'siteurl', 'http://localhost/grupp2', 'yes'),
 (2, 'home', 'http://localhost/grupp2', 'yes'),
 (3, 'blogname', 'Sellforce', 'yes'),
 (4, 'blogdescription', '', 'yes'),
