@@ -1,8 +1,8 @@
 <?php
   //find WordPress in our filesystem
   $site_root = explode("/", $_SERVER["REQUEST_URI"]);
-  $site_root = "/" . $site_root[1] . "/";
-  $wp_root = substr(__DIR__, 0, stripos(__DIR__, $site_root) + strlen($site_root));
+  $site_root = $site_root[1];
+  $wp_root = substr(__DIR__, 0, stripos(__DIR__, $site_root) + strlen($site_root) + 1);
   require($wp_root . 'wp-load.php');
 ?>
 
