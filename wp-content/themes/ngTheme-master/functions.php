@@ -232,14 +232,14 @@ add_action('init' , 'ngwp_add_property_tax_to_posts');
 
 
 
-function addMetaSearch() {
-  global $wp;
+// function addMetaSearch() {
+//   global $wp;
 
 
-  array_push($wp->public_query_vars, 'meta_key');
-  array_push($wp->public_query_vars, 'meta_value');
-}
-add_action("init", "addMetaSearch");
+//   array_push($wp->public_query_vars, 'meta_key');
+//   array_push($wp->public_query_vars, 'meta_value');
+// }
+// add_action("init", "addMetaSearch");
 
 
 add_filter( 'json_prepare_post', function ($data, $post, $context) {
