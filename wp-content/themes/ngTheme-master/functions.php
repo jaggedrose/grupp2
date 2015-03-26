@@ -232,14 +232,14 @@ add_action('init' , 'ngwp_add_property_tax_to_posts');
 
 
 
-function addMetaSearch() {
-  global $wp;
+// function addMetaSearch() {
+//   global $wp;
 
 
-  array_push($wp->public_query_vars, 'meta_key');
-  array_push($wp->public_query_vars, 'meta_value');
-}
-add_action("init", "addMetaSearch");
+//   array_push($wp->public_query_vars, 'meta_key');
+//   array_push($wp->public_query_vars, 'meta_value');
+// }
+// add_action("init", "addMetaSearch");
 
 
 add_filter( 'json_prepare_post', function ($data, $post, $context) {
@@ -276,7 +276,21 @@ function ngTheme_widgets_init() {
     'after_widget'  => '</aside>',
     'before_title'  => '<h2 class="widget-title">',
     'after_title'   => '</h2>',
-  ) );
+    )
+  );
 }
 add_action( 'widgets_init', 'ngTheme_widgets_init' );
 
+
+register_sidebar( 
+  array(
+    'name' => 'Footer Sidebar 1',
+    'id' => 'footer-sidebar-1',
+    'description' => 'Appears in the footer area',
+    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    'after_widget' => '</aside>',
+    'before_title' => '<h3 class="widget-title">',
+    'after_title' => '</h3>',
+  )
+  //add another array here to support multiple footer widget areas
+);

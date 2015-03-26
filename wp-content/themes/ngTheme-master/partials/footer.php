@@ -1,15 +1,19 @@
-	<section class="container">
-	  <h2>Adress: Adminstreet72<br>Phone number: 666-66666<br>Email: admin@admin.com</h2>
+<?php
+  //find WordPress in our filesystem
+  $site_root = explode("/", $_SERVER["REQUEST_URI"]);
+  $site_root = $site_root[1];
+  $wp_root = substr(__DIR__, 0, stripos(__DIR__, $site_root) + strlen($site_root) + 1);
+  require($wp_root . 'wp-load.php');
+?>
 
-	</section>
+<section class="container">
+  <div id="secondary" class="widget-area" role="complementary">
+    <!-- 
+      Ask wordpress to start printing any content from the
+      footer sidebar (defined in functions.php)
+    -->
+    <?php dynamic_sidebar( 'footer-sidebar-1' ); ?>
+  </div>
+</section>
 
-	<?php wp_footer(); ?>
-		
-		
-	 <?php if ( is_active_sidebar( 'sidebar-1' )  ) : ?>
-
-	 <div class="widget-area" role="complementary">
 	 
-	  <?php dynamic_sidebar( 'sidebar-1' ); ?>
-	 
-	 </div>
