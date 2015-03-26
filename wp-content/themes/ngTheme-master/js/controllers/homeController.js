@@ -1,6 +1,6 @@
 //"ngTheme" home controller.
 //dependent on $scope && WPService being injected to run
-app.controller("homeController", ["$scope", "Pages", "$sce", "$routeParams", function($scope, Pages, $sce, $routeParams) {
+app.controller("homeController", ["$scope", "Pages", "Bostad", "$sce", "$routeParams", function($scope, Pages, Bostad, $sce, $routeParams) {
 	console.log("homeController alive! routeParams: ", $routeParams);
 	
 	//get page
