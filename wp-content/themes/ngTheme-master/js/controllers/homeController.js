@@ -17,6 +17,7 @@ app.controller("homeController", ["$scope", "Pages", "Bostad", "$sce", "$routePa
 		}
 
 		$scope.mediaItems = mediaItems;
+		console.log(mediaItems);
 	});
 
 

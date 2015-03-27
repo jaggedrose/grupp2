@@ -1,13 +1,16 @@
 <section class="container">
   <div class="row">
 
-    <section style="height:500px;" class="col-xs-12 col-sm-10 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-0">
-      <carousel interval="carouselInterval">
+    <div class="col-xs-12 col-sm-12  col-md-12 col-lg-12">
+      <carousel interval="carouselInterval" class="container-fluid" style="height:600px; overflow:hidden;">
         <slide ng-repeat="media in mediaItems" active="media.active">
           <img ng-src="{{media.source}}" style="margin:auto;" class="img-responsive">
+          <!-- <div class="carousel-caption">
+            <h4>{{media.caption}}</h4>
+          </div> -->
         </slide>
       </carousel>
-    </section>
+    </div>
 
     <article class="col-xs-12 col-sm-10 col-md-8 col-lg-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-2 col-lg-offset-2">
       <h2>{{page.title}}</h2>
