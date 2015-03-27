@@ -5,18 +5,22 @@ app.controller("homeController", ["$scope", "Pages", "Bostad", "$sce", "$routePa
 	
 
 	Bostad.find($routeParams);
-	$scope.partialsDir = SITE_INFO.partials;
-
+	
 	$scope.carouselInterval = 5000;
 
 	$scope.$on("foundBostad", function(event, data) {
-		console.log("bostadsController on foundBostad: ", data);
-		if (data.length === 0) {return;}
-		$scope.bostad = data[0];
+		// console.log("bostadsController on foundBostad: ", data);
+		
+		var mediaItems = [];
+		for(var i = data.length - 1; i > -1 && i > data.length - 6; i--) {
+			mediaItems.push(data[i].media[data[i].media.length - 1]);
+		}
+
+		$scope.mediaItems = mediaItems;
 	});
 
 
-	//get page
+	// Get page
 	Pages.get("hem");
 
 	// EXAMPLE LISTENER TO A $broadcast COMING FROM WPRest SERVICE!!!
