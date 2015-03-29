@@ -14,22 +14,22 @@
 
     <div class="row">
       <article class="col-xs-12 col-sm-10 col-md-8 col-lg-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-2 col-lg-offset-2">
-        <div class="content" ng-bind-html="page.content"></div>
+        <h2>{{page.title}}</h2>
+        <!-- <div class="content" ng-bind-html="page.content"></div> -->
       </article>
 
       <section class="col-md-4">
-        <div id="about" class="content" ng-bind-html="page.content"></div>
+        <div id="about" class="content" ng-bind-html="aboutus"></div>
       </section>
 
       <section class="col-md-4">
-        <div id="contact" class="content" ng-bind-html="page.content"></div>
+        <div id="contact" class="content" ng-bind-html="contact"></div>
       </section>
 
       <section class="col-md-4">
-        <div id="properties" class="content" ng-bind-html="page.content"></div>
+        <div id="properties" class="content" ng-bind-html="forsale"></div>
       </section>
     </div>
 
   </div>
 </section>
-

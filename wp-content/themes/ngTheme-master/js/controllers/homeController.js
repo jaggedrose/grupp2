@@ -1,7 +1,7 @@
 //"ngTheme" home controller.
 //dependent on $scope && WPService being injected to run
-app.controller("homeController", ["$scope", "Pages", "Bostad", "$sce", "$routeParams", "SITE_INFO", function($scope, Pages, Bostad, $sce, $routeParams, SITE_INFO) {
-	console.log("homeController alive! routeParams: ", $routeParams);
+app.controller("homeController", ["$scope", "Pages", "Bostad", "$sce", "$filter", "$routeParams", "SITE_INFO", function($scope, Pages, Bostad, $sce, $filter, $routeParams, SITE_INFO) {
+	// console.log("homeController alive! routeParams: ", $routeParams);
 	
 
 	Bostad.find($routeParams);
@@ -29,6 +29,18 @@ app.controller("homeController", ["$scope", "Pages", "Bostad", "$sce", "$routePa
 	$scope.$on("gotPageData", function(event, data) {
 		console.log("homeController on gotPageData: ", data);
 		$scope.page = data[0];
+
+		// Testing - Converting content back to string
+		var allContent = data[0].content;
+		var allContentString = allContent.toString();
+		
+		// Spliting the content into sections
+		var splitString = allContentString.split("</p>");
+		
+		$scope.aboutus = $sce.trustAsHtml(splitString[0]);
+		$scope.contact = $sce.trustAsHtml(splitString[1]);
+		$scope.forsale = $sce.trustAsHtml(splitString[2]);
+
 	});
-  
+
 }]);
