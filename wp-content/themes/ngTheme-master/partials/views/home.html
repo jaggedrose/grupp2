@@ -2,7 +2,7 @@
   <div class="row">
 
     <div class="col-xs-12 col-sm-12  col-md-12 col-lg-12">
-      <carousel interval="carouselInterval" class="container-fluid" style="height:500px; width:800px; overflow:hidden;">
+      <carousel interval="carouselInterval" class="container-fluid" style="height:500px; width:600px; overflow:hidden;">
         <slide ng-repeat="media in mediaItems" active="media.active">
           <img ng-src="{{media.source}}" style="margin:auto;" class="img-responsive">
           <!-- <div class="carousel-caption">
@@ -12,11 +12,23 @@
       </carousel>
     </div>
 
-    <article class="col-xs-12 col-sm-10 col-md-8 col-lg-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-2 col-lg-offset-2">
-      <h2>{{page.title}}</h2>
-      <div class="content" ng-bind-html="page.content"></div>
-    </article>
+    <div class="row">
+      <article class="col-xs-12 col-sm-10 col-md-8 col-lg-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-2 col-lg-offset-2">
+        <div class="content" ng-bind-html="page.content"></div>
+      </article>
 
+      <section class="col-md-4">
+        <div id="about" class="content" ng-bind-html="page.content"></div>
+      </section>
+
+      <section class="col-md-4">
+        <div id="contact" class="content" ng-bind-html="page.content"></div>
+      </section>
+
+      <section class="col-md-4">
+        <div id="properties" class="content" ng-bind-html="page.content"></div>
+      </section>
+    </div>
 
   </div>
 </section>
