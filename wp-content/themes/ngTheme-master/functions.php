@@ -262,8 +262,16 @@ add_filter( 'json_prepare_post', function ($data, $post, $context) {
     'yta_m2' => get_post_meta( $post['ID'], 'yta_m2', true ),
     'badkar' => get_post_meta( $post['ID'], 'badkar', true ),
   );
+
+
+  $data['about_data'] = array(
+    'telefon' => get_post_meta( $post['ID'], 'telefon' , true),
+    'mobil' => get_post_meta( $post['ID'], 'mobil' , true),
+    'email' => get_post_meta( $post['ID'], 'email' , true),
+  );
   return $data;
-}, 7, 3 );
+}, 10, 3 );
+
 
 
 
