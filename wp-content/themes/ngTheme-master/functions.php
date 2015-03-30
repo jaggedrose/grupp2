@@ -240,6 +240,30 @@ function ngwp_add_property_tax_to_posts() {
 
 add_action('init' , 'ngwp_add_property_tax_to_posts');
 
+
+
+function about_init() {
+  register_taxonomy(
+    'about',
+    'attachment',
+    array(
+      'label' => __('om-oss'),
+      'rewrite' => array( 'slug' => 'om-oss' ),
+
+      )
+    );
+}
+
+add_action('init', 'about_init');
+
+function ngwp_add_about_tax_to_posts() {
+  register_taxonomy_for_object_type( 'about', 'post');
+}
+
+add_action('init' , 'ngwp_add_about_tax_to_posts');
+
+
+
 //Wordpress metadata
 
 
@@ -252,6 +276,7 @@ add_action('init' , 'ngwp_add_property_tax_to_posts');
 //   array_push($wp->public_query_vars, 'meta_value');
 // }
 // add_action("init", "addMetaSearch");
+
 
 
 add_filter( 'json_prepare_post', function ($data, $post, $context) {
@@ -274,7 +299,11 @@ add_filter( 'json_prepare_post', function ($data, $post, $context) {
     'yta_m2' => get_post_meta( $post['ID'], 'yta_m2', true ),
     'badkar' => get_post_meta( $post['ID'], 'badkar', true ),
   );
+  return $data;
+}, 7, 3 );
 
+
+add_filter( 'json_prepare_post', function ($data, $post, $context) {
 
   $data['about_data'] = array(
     'telefon' => get_post_meta( $post['ID'], 'telefon' , true),
@@ -282,7 +311,7 @@ add_filter( 'json_prepare_post', function ($data, $post, $context) {
     'email' => get_post_meta( $post['ID'], 'email' , true),
   );
   return $data;
-}, 10, 3 );
+}, 3, 3 );
 
 
 

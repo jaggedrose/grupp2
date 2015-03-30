@@ -6,7 +6,7 @@ app.controller("aboutAllController", ["$scope", "About", "SITE_INFO", "$routePar
 	$scope.partialsDir = SITE_INFO.partials;
 
 
-	$scope.$on("foundPosts", function(event, data) {
+	$scope.$on("foundAbout", function(event, data) {
 
 		console.log("aboutAllController on foundPosts: ", data);
 		$scope.aboutModels = data;
