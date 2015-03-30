@@ -9,7 +9,7 @@ app.controller("aboutAllController", ["$scope", "About", "SITE_INFO", "$routePar
 	$scope.$on("foundAbout", function(event, data) {
 
 		console.log("aboutAllController on foundPosts: ", data);
-		$scope.aboutModels = data;
+		$scope.aboutMe = data;
 	});
 
 	$scope.goTo = function(url) {

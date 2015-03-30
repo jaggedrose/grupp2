@@ -1,28 +1,17 @@
-
   <div  class="row">
-  <h2>{{about_data.post.title}}</h2>
-      <div ng-bind-html="about.post.content" style="margin-top:15px; float:left; line-height:20px; background-color:#fcfbf9;padding:8px 0 0 8px;"></div>
  
-        <table class="table">
-        <tr>
-          <th>Medarbetare:</th>
-         
-          <th>Info:</th>
-          <th>Gå till:</th>
-        </tr>
-        <tr ng-repeat="about in om-oss">
-          <td>{{about.post.title}}</td>
-          <td><div ng-bind-html="about.post.excerpt"></div></td>
-          <td><button class="btn btn-sm btn-success" ng-click="goTo('about/'+about.post.slug)">Mer info</button></td>
+      <div ng-bind-html="about.post.content" style="margin-top:15px; float:left; line-height:20px; background-color:#fcfbf9;padding:8px 0 0 8px;"></div>
+
+    
+
+      <!-- Table -->
+      <table class="table">
+
+        <tr ng-repeat="me in aboutMe">
+          <td>{{me.post.title}}</td>
+          <td><img ng-src="{{me.media[0].source}}" style="margin:4px auto 0;" class="img-responsive img-thumbnail"></td>
+          <td><div ng-bind-html="me.post.content"></div></td>
+
         </tr>
       </table>
 
-       <table class="table" style="">
-      <tr>
-        <th style="background-color:#fcfbf9;" ng-repeat="(key,val) in about.aboutData">{{key}}</th>
-      </tr>
-      <tr>
-        <td ng-repeat="(key,val) in about.aboutData">{{val}}</td>
-      </tr>
-    </table>
-  </div>
