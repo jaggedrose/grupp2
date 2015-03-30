@@ -11,10 +11,10 @@ app.factory("Pages", ["WPRest", "$sce", function (WPRest, $sce) {
           // Make html trusted, to make angular happy
           if (data.constructor.name == "Array") {
             data.forEach(function(item) {
+              // Special treatment for "home" page
               item.customContent = {};
               if (pageSlug == "hem") {
 
-                // Testing - Converting content back to string
                 var allContent = item.content;
                 
                 // Spliting the content into sections
