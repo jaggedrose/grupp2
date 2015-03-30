@@ -7,7 +7,7 @@
 ?>
 
 <section class="container">
-  <div id="secondary" class="widget-area" role="complementary">
+  <div id="secondary" class="widget-area  " role="complementary">
     <!-- 
       Ask wordpress to start printing any content from the
       footer sidebar (defined in functions.php)
