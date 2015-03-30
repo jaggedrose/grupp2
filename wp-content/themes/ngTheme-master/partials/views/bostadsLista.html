@@ -1,9 +1,12 @@
 <section class="container">
 
   <div class="row">
-    <div>
-      <input type="text" ng-model="bostadFilters.Stad" placeholder="Sök efter Adress...">
-    </div>
+    <form class="navbar-form navbar-left" role="search">
+      <div class="form-group">
+      <input type="text" ng-model="bostadFilters.bostadData.stad" class="form-control" placeholder="Search">
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
     <div class="panel panel-default">
       <!-- Default panel contents -->
       <div class="panel-heading">Resultat:</div>
@@ -19,7 +22,7 @@
           <th>Info:</th>
           <th>Gå till:</th>
         </tr>
-        <tr ng-repeat="model in bostadModels">
+        <tr ng-repeat="model in bostadModels | filter:bostadFilters">
           <td>{{model.post.title}}</td>
           <td><img ng-src="{{model.media[0].source}}" style="margin:4px auto 0;" class="img-responsive img-thumbnail"></td>
           <td><div ng-bind-html="model.post.excerpt"></div></td>
