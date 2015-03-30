@@ -48,7 +48,7 @@ app.factory("Menus", ["WPRest", "SITE_INFO", function(WPRest, SITE_INFO) {
 			hash["_"+link.parent].children.push(link);
 		}
 
-		console.log("menuTree: ", menuTree);
+		// console.log("menuTree: ", menuTree);
 		return menuTree;
 	}
 

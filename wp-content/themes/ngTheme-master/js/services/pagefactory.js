@@ -11,6 +11,21 @@ app.factory("Pages", ["WPRest", "$sce", function (WPRest, $sce) {
           // Make html trusted, to make angular happy
           if (data.constructor.name == "Array") {
             data.forEach(function(item) {
+              item.customContent = {};
+              if (pageSlug == "hem") {
+
+                // Testing - Converting content back to string
+                var allContent = item.content;
+                
+                // Spliting the content into sections
+                var splitString = allContent.split("</p>");
+
+                item.customContent.aboutus = $sce.trustAsHtml(splitString[0]);
+                item.customContent.contact = $sce.trustAsHtml(splitString[1]);
+                item.customContent.forsale = $sce.trustAsHtml(splitString[2]);
+
+              }
+
               item.excerpt = $sce.trustAsHtml(item.excerpt);
               item.content = $sce.trustAsHtml(item.content);
             });

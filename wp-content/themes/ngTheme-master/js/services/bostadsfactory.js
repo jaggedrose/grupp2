@@ -17,7 +17,7 @@ app.factory("Bostad", ["WPRest", "$sce", function(WPRest, $sce) {
 				broadcastName: "KEBAAHB",
 				callback: function(postData) {
 
-					console.log("Bostad hittade bostad post: ", postData);
+					// console.log("Bostad hittade bostad post: ", postData);
 
 					var resultsToBroadcast = [];
 
@@ -35,7 +35,7 @@ app.factory("Bostad", ["WPRest", "$sce", function(WPRest, $sce) {
 						WPRest.restCall(mediaCallUrl, "GET", {}, {
 							broadcastName: last ? "foundBostad" : "notDone",
 							callback: function(mediaData) {
-								console.log("Bostad hittade bostad media: ", mediaData);
+								// console.log("Bostad hittade bostad media: ", mediaData);
 
 								resultsToBroadcast.push({
 									"media": mediaData,
