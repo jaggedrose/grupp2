@@ -10,6 +10,7 @@ app.controller("aboutAllController", ["$scope", "About", "SITE_INFO", "$routePar
 
 		console.log("aboutAllController on foundPosts: ", data);
 		$scope.aboutMe = data;
+		//$scope.aboutData = $scope.post.aboutData;
 	});
 
 	$scope.goTo = function(url) {

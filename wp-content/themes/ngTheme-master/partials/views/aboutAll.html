@@ -1,17 +1,19 @@
   <div  class="row">
  
-      <div ng-bind-html="about.post.content" style="margin-top:15px; float:left; line-height:20px; background-color:#fcfbf9;padding:8px 0 0 8px;"></div>
-
-    
-
-      <!-- Table -->
       <table class="table">
 
         <tr ng-repeat="me in aboutMe">
           <td>{{me.post.title}}</td>
           <td><img ng-src="{{me.media[0].source}}" style="margin:4px auto 0;" class="img-responsive img-thumbnail"></td>
-          <td><div ng-bind-html="me.post.content"></div></td>
-
+          <td><div ng-bind-html="me.post.content"></div>
+         </td>
         </tr>
       </table>
-
+      <table class="table" style="">
+      <tr>
+        <th style="background-color:#fcfbf9;" ng-repeat="(key,val) in about.about_data">{{key}}</th>
+      </tr>
+      <tr>
+        <td ng-repeat="(key,val) in about.about_data">{{val}}</td>
+      </tr>
+    </table>
