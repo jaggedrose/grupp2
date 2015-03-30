@@ -18,4 +18,15 @@ app.controller("bostadsListController", ["$scope", "Bostad", "SITE_INFO", "$rout
 	$scope.goTo = function(url) {
 		$location.url(url);
 	};
+	
+	$scope.bostadFilters = {
+		pris : [], 
+	}
+	
+	$scope.filterReset = function() {
+		$scope.bostadFilters = {
+		  pris : []
+		}
+	 } 
+	  
 }]);
