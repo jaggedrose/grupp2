@@ -10,6 +10,7 @@ app.controller("homeController", ["$scope", "Pages", "Bostad", "$sce", "$filter"
 
 	$scope.$on("foundBostad", function(event, data) {
 		// console.log("bostadsController on foundBostad: ", data);
+
 		
 		var mediaItems = [];
 		for(var i = data.length - 1; i > -1 && i > data.length - 6; i--) {
@@ -30,16 +31,8 @@ app.controller("homeController", ["$scope", "Pages", "Bostad", "$sce", "$filter"
 		console.log("homeController on gotPageData: ", data);
 		$scope.page = data[0];
 
-		// Testing - Converting content back to string
-		var allContent = data[0].content;
-		var allContentString = allContent.toString();
-		
-		// Spliting the content into sections
-		var splitString = allContentString.split("</p>");
-		
-		$scope.aboutus = $sce.trustAsHtml(splitString[0]);
-		$scope.contact = $sce.trustAsHtml(splitString[1]);
-		$scope.forsale = $sce.trustAsHtml(splitString[2]);
+		$scope.customContent = $scope.page.customContent;
+
 
 	});
 

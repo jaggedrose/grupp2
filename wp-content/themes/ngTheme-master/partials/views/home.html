@@ -18,16 +18,8 @@
         <!-- <div class="content" ng-bind-html="page.content"></div> -->
       </article>
 
-      <section class="col-md-4">
-        <div id="about" class="content" ng-bind-html="aboutus"></div>
-      </section>
-
-      <section class="col-md-4">
-        <div id="contact" class="content" ng-bind-html="contact"></div>
-      </section>
-
-      <section class="col-md-4">
-        <div id="properties" class="content" ng-bind-html="forsale"></div>
+      <section ng-repeat="(key, val) in customContent" class="col-md-4">
+        <div id="{{key}}" class="content" ng-bind-html="val"></div>
       </section>
     </div>
 
