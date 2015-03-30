@@ -1,14 +1,27 @@
 <section class="container">
-<!--
   <div class="row">
-     <article class="col-xs-12 col-sm-10 col-md-8 col-lg-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-2 col-lg-offset-2">
-      <h2>Hello World!</h2>
-      <p>You probably want to start by reading the <a href="http://wp-api.org/guides/getting-started.html" target="_blank">WP JSON REST API documentation.</a></p>
-    </article>   
+
+    <div class="col-xs-12 col-sm-12  col-md-12 col-lg-12">
+      <carousel interval="carouselInterval" class="container-fluid" style="height:500px; width:600px; overflow:hidden;">
+        <slide ng-repeat="media in mediaItems" active="media.active">
+          <img ng-src="{{media.source}}" style="margin:auto;" class="img-responsive">
+          <!-- <div class="carousel-caption">
+            <h4>{{media.caption}}</h4>
+          </div> -->
+        </slide>
+      </carousel>
+    </div>
+
+    <div class="row">
+      <article class="col-xs-12 col-sm-10 col-md-8 col-lg-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-2 col-lg-offset-2">
+        <h2>{{page.title}}</h2>
+        <!-- <div class="content" ng-bind-html="page.content"></div> -->
+      </article>
+
+      <section ng-repeat="(key, val) in customContent" class="col-md-4">
+        <div id="{{key}}" class="content" ng-bind-html="val"></div>
+      </section>
+    </div>
+
   </div>
-  -->
-  <article ng-repeat="page in pages" class="col-xs-12 col-sm-10 col-md-8 col-lg-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-2 col-lg-offset-2">
-    <h2>{{page.title}}</h2>
-    <div class="content" ng-bind-html="page.content"></div>
-  </article>
 </section>

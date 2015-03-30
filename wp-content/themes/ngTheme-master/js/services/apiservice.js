@@ -1,7 +1,7 @@
 //a "core" service that handles all rest calls to WordPress
 app.service("WPRest", ["$http", "$rootScope", "SITE_INFO", "API_ROUTE", function($http, $rootScope, SITE_INFO, API_ROUTE) {
   var APIPath = SITE_INFO.http_root + API_ROUTE;
-  console.log("APIPath: ", APIPath);
+  // console.log("APIPath: ", APIPath);
 
   //in a .service() service this syntax is preferred
   this.restCall = function(url, method, data, broadcastInstructions) {
@@ -12,7 +12,7 @@ app.service("WPRest", ["$http", "$rootScope", "SITE_INFO", "API_ROUTE", function
       data: data,
       responseType: "json"
     }).success(function(data) {
-      console.log("WPRest restCall success: ", data, " broadcast instructions: ", broadcastInstructions);
+      // console.log("WPRest restCall success: ", data, " broadcast instructions: ", broadcastInstructions);
 
       if (typeof broadcastInstructions == "object") {
         // If broadcastInstructions is an object, it contains callback instruction

@@ -2,15 +2,15 @@
 app.controller("headerController", ["$scope", "$location", "Menus", "SITE_INFO", function($scope, $location, Menus, SITE_INFO) {
 	$scope.partialsDir = SITE_INFO.partials;
 
-	console.log("headerController is alive!");
-	console.log("SITE_INFO: ", SITE_INFO);
+	// console.log("headerController is alive!");
+	// console.log("SITE_INFO: ", SITE_INFO);
 
 	//get the menuLinks for menuId 2 using WPRest
 	Menus.get(2);
 
 	//listen to the broadcast "gotMenuLinks"
 	$scope.$on("gotMenuLinks", function(event, data) {
-		console.log("headerController on gotMenuLinks: ", data);
+		// console.log("headerController on gotMenuLinks: ", data);
 		$scope.menuLinks = data.items;
 	});
 
