@@ -8,25 +8,25 @@ app.config(["$routeProvider", "$locationProvider", "SITE_INFO", function($routeP
       templateUrl: SITE_INFO.partials+"views/home.html",
       controller: "homeController"
     })
-    .when("/pages/:slug", {
+    .when("/pages/till-salu", {
+      templateUrl: SITE_INFO.partials+"views/tillSalu.html",
+      controller: "tillSaluController"
+    })
+    .when("/pages/om-oss", {
       templateUrl: SITE_INFO.partials+"views/about.html",
       controller: "aboutController"
     })
-    .when("/pages/:slug", {
+    .when("/pages/kontakt", {
       templateUrl: SITE_INFO.partials+"views/contact.html",
       controller: "contactController"
-    })
-    .when("/pages/:slug", {
-      templateUrl: SITE_INFO.partials+"views/contact.html",
-      controller: "tillSaluController"
     })
     .when("/bostad/:name", {
       templateUrl: SITE_INFO.partials+"views/bostad.html",
       controller: "bostadsController"
     })
-    .when("/search", {
-      templateUrl: SITE_INFO.partials+"views/bostadsLista.html",
-      controller: "bostadsListController"
+    .when("/pages/till-salu", {
+      templateUrl: SITE_INFO.partials+"views/tillSalu.html",
+      controller: "tillSaluController"
     })
     .otherwise({
       redirectTo: "/"

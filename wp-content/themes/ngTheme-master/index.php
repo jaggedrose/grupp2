@@ -14,7 +14,7 @@
 
   </main>
  
-  <footer ng-include="'<?php echo(THEME_HTTP_ROOT)?>partials/footer.html'" ng-controller="footerController">
+  <footer ng-include="'<?php echo(THEME_HTTP_ROOT)?>partials/footer.php'" ng-controller="footerController">
   </footer>
  
 </body>

@@ -6553,7 +6553,7 @@ main {
   min-height: 100%;
   /* equal to footer height */
   margin-bottom: -142px;
-  margin-top: 95px;
+  margin-top: 15px;
 }
 main:after {
   content: "";
@@ -6572,4 +6572,7 @@ footer {
 nav {
   font-family: 'Impact', sans-serif;
   font-size: 25px;
+}
+.img-thumbnail {
+  width: 250px;
 }
