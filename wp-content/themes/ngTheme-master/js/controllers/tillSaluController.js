@@ -9,8 +9,8 @@ app.controller("tillSaluController", ["$scope", "Pages", "Bostad", "$sce", "$rou
 		$scope.page = data[0];
 	});
 
-	$scope.bostadFilters = {
+	/*$scope.bostadFilters = {
 		Stad : ""
- 	};
+ 	};*/
  	Bostad.find($routeParams);	
 }]);
