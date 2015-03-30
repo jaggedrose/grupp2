@@ -11,7 +11,6 @@ app.controller("homeController", ["$scope", "Pages", "Bostad", "$sce", "$filter"
 	$scope.$on("foundBostad", function(event, data) {
 		// console.log("bostadsController on foundBostad: ", data);
 
-		
 		var mediaItems = [];
 		for(var i = data.length - 1; i > -1 && i > data.length - 6; i--) {
 			mediaItems.push(data[i].media[data[i].media.length - 1]);
@@ -32,8 +31,6 @@ app.controller("homeController", ["$scope", "Pages", "Bostad", "$sce", "$filter"
 		$scope.page = data[0];
 
 		$scope.customContent = $scope.page.customContent;
-
-
 	});
 
 }]);

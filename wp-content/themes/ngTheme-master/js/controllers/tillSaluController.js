@@ -1,4 +1,4 @@
-app.controller("tillSaluController", ["$scope", "Pages", "$sce", "$routeParams", function($scope, Pages, $sce, $routeParams) {
+app.controller("tillSaluController", ["$scope", "Pages", "Bostad", "$sce", "$routeParams", function($scope, Pages, Bostad, $sce, $routeParams) {
 	console.log("tillSaluController Working! routeParams: ", $routeParams);
 	// Get the page
 	Pages.get("till-salu");
@@ -8,4 +8,9 @@ app.controller("tillSaluController", ["$scope", "Pages", "$sce", "$routeParams",
 		console.log("tillSaluController on gotPageData: ", data);
 		$scope.page = data[0];
 	});
+
+	/*$scope.bostadFilters = {
+		Stad : ""
+ 	};*/
+ 	//Bostad.find($routeParams);	
 }]);
