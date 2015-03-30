@@ -1,7 +1,8 @@
-app.filter('prisKlass', [function () {
+app.filter('prisFilter', [function () {
   return function (bostads, range) {
     if (!bostads) { return; }
      console.log("bostads: ", bostads);
+     console.log("range: ", range);
     
     var filtered = [];
     

@@ -4,14 +4,27 @@ app.controller("bostadsListController", ["$scope", "Bostad", "SITE_INFO", "$rout
 
 	$scope.partialsDir = SITE_INFO.partials;
 
+
+	$scope.bostadPrisFilter = {
+		prisKlass : []
+	};
+	
+	$scope.filterReset = function() {
+		$scope.bostadPrisFilter = {
+			prisKlass : []
+		};
+	};
+
+
 	$scope.carouselInterval = 5000;
+
 	var pageNo = 1;
 	Bostad.find($routeParams);
 	$scope.$on("foundBostad", function(event, data) {
 
 		console.log("BostadsController on foundBostad: ", data);
 		$scope.bostadModels = data;
-		pageNo++
+		pageNo++;
 		Bostad.find($routeParams, pageNo);
 	});
 
@@ -19,14 +32,4 @@ app.controller("bostadsListController", ["$scope", "Bostad", "SITE_INFO", "$rout
 		$location.url(url);
 	};
 	
-	$scope.bostadFilters = {
-		pris : [], 
-	}
-	
-	$scope.filterReset = function() {
-		$scope.bostadFilters = {
-		  pris : []
-		}
-	 } 
-	  
 }]);
