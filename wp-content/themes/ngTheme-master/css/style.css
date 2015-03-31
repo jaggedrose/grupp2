@@ -6628,3 +6628,6 @@ frontCarousel {
 .dataHedear:first-letter {
   text-transform: uppercase;
 }
+.TrHeader .dataHedear {
+  background-color: #f6c279;
+}
