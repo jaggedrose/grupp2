@@ -6613,3 +6613,6 @@ frontCarousel {
 .panel-default > .panel-heading {
   background-color: #f6c279;
 }
+.margin_auto {
+  margin: auto;
+}

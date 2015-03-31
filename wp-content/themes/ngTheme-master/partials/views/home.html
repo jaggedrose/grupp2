@@ -4,7 +4,7 @@
     <div class="col-xs-12 col-sm-12  col-md-12 col-lg-12">
       <carousel interval="carouselInterval" class="container-fluid frontCarousel" >
         <slide ng-repeat="media in mediaItems" active="media.active">
-          <img ng-src="{{media.source}}" style="margin:auto;" class="img-responsive">
+          <img ng-src="{{media.source}}" class="img-responsive margin_auto">
           <!-- <div class="carousel-caption">
             <h4>{{media.caption}}</h4>
           </div> -->
@@ -14,7 +14,7 @@
 
     <div class="row">
       <article class="col-xs-12 col-sm-10 col-md-8 col-lg-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-2 col-lg-offset-2">
-        <h2>{{page.title}}</h2>
+        <h2 class="center">{{page.title}}</h2>
         <!-- <div class="content" ng-bind-html="page.content"></div> -->
       </article>
 
