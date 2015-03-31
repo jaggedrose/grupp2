@@ -1,33 +1,8 @@
-
-<!--  	<section class="container-fluid ">
- 	<div  class="row">
-      <table class="table table-responsive">
-        <tr ng-repeat="model in aboutModels">
-          <td>{{me.post.title}}</td>
-          <td><img ng-src="{{model.media[0].source}}" style="margin:4px auto 0;" class="img-responsive img-thumbnail"></td>
-          <td><div ng-bind-html="model.post.content"></div>
-         </td>
-        </tr>
-      </table>
-    </section>
-    <section> 
-	    <table class="table" style="">
-	      <tr>
-	        <th style="background-color:#fcfbf9;" ng-repeat="(key,val) in aboutModels[0].aboutData">{{key}}</th>
-	      </tr>
-	      <tr ng-repeat="about in aboutModels">
-	        <td ng-repeat="(key,val) in about.aboutData">{{val}}</td>
-	      </tr>
-	    </table>
-	</div>
-   </section> -->
-
    <section class="row">
    		<div class="col-xs-10 col-sm-6 col-md-4 col-lg-4" ng-repeat="model in aboutModels">
    			<article class="panel panel-default">
    				<div class="panel-heading">
    					<h3 class="panel-title">{{model.post.title}}</h3>
-
    				</div>
    				<div style="text-align:left;">
    					<img ng-src="{{model.media[0].source}}" style="float:left;" class="img-responsive img-thumbnail-about">
@@ -39,18 +14,10 @@
    				</div>
 
    				<ul class="list-group">
-				  <li class="list-group-item" ng-repeat="(key,val) in model.aboutData"><strong><span class="dataHeader">{{key | lowercase}}:</span></strong> {{val}}</li>
+				  <li class="dataHeader list-group-item" ng-repeat="(key,val) in model.aboutData">
+				  
+				  <strong>{{key | lowercase}}</strong>: {{val}}</li>
 				</ul>
-					   					
-
-   				<!--<table class="table">
-   					<tr>
-				      <th style="background-color:#fcfbf9;" ng-repeat="(key,val) in model.aboutData">{{key}}</th>
-				    </tr>
-				    <tr>
-				      <td ng-repeat="(key,val) in model.aboutData">{{val}}</td>
-				    </tr>
-   				</table> -->
    			</article>
    		</div>
    </section>
