@@ -2,7 +2,7 @@
   <div class="row">
 
     <div class="col-xs-12 col-sm-12  col-md-12 col-lg-12">
-      <carousel interval="carouselInterval" class="container-fluid" style="height:500px; width:600px; overflow:hidden;">
+      <carousel interval="carouselInterval" class="container-fluid frontCarousel" >
         <slide ng-repeat="media in mediaItems" active="media.active">
           <img ng-src="{{media.source}}" style="margin:auto;" class="img-responsive">
           <!-- <div class="carousel-caption">
