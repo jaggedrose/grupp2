@@ -53,10 +53,6 @@ app.config(["$routeProvider", "$locationProvider", "SITE_INFO", function($routeP
       templateUrl: SITE_INFO.partials+"views/bostad.html",
       controller: "bostadsController"
     })
-    .when("/pages/till-salu", {
-      templateUrl: SITE_INFO.partials+"views/tillSalu.html",
-      controller: "tillSaluController"
-    })
     .otherwise({
       redirectTo: "/"
     });

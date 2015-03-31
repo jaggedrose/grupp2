@@ -92,3 +92,15 @@ frontCarousel {
     display: none;
   }
 }
+
+
+@main-color: #C97A0D; 
+@main-color-hover:  lighten(@main-color, 30%);
+
+.headerColor{
+	background-color:@main-color-hover;
+}
+
+.panel-default > .panel-heading {
+	.panel-heading{}background-color:@main-color-hover;
+}

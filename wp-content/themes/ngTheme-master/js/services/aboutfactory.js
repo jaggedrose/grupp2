@@ -1,7 +1,8 @@
 app.factory("About", ["WPRest", "$sce", function(WPRest, $sce) {
 
-	WPRest.restCall("/", "GET", {}, "WPRestWorks");
+	//WPRest.restCall("/", "GET", {}, "WPRestWorks");
 
+	
 
 	var aboutServant = {
 		find: function(searchParams) {
@@ -10,43 +11,85 @@ app.factory("About", ["WPRest", "$sce", function(WPRest, $sce) {
 
 			var callUrl = "/posts?filter[category_name]=om-oss";
 
+			var first = true;
+
 			for (var i in searchParams) {
-				callUrl += "&filter["+i+"]="+searchParams[i];
+
+			  if (searchParams[i].constructor.name != "Object") {
+
+			  	callUrl += first ?
+			  	"?filter["+i+"]="+searchParams[i] :
+			  	"&filter["+i+"]="+searchParams[i];
+			  } else {
+
+					for (var j in searchParams[i]) {
+					callUrl += first ?
+					"?filter["+i+"]["+j+"]="+searchParams[i][j] :
+					"&filter["+i+"]["+j+"]="+searchParams[i][j];
+					first = false;			  		
+				  	}
+			 	}
+
+			 	first = false;
+				
 			}
-			console.log("Hitta om-oss metoden ropar på REST url: ", callUrl);
+			console.log("om-oss metoden ropar på REST url: ", callUrl);
+
 
 			WPRest.restCall(callUrl, "GET", {}, {
-			  broadcastName: "Om-oss",
+			  broadcastName: "Important NOT!",
 			  callback: function(postData) {
-			  	console.log("Aboutfactory hittade om-oss poster: ", postData);
+
+			  		console.log("Aboutfactory hittade om-oss poster: ", postData);
+
+			  	 for (var i = 0; i < postData.length; i++) {
+					if (!postData[i].terms.about) {
+					postData.splice(i, 1);
+				    }
+				}
+			  
 
 			  	var resultsToBroadcast = [];
+
 			  	var i = 0;
 			  	postData.forEach(function(post){
+				  		var last = i === postData.length-1;
+				  		//if (post.terms.about) {
 
-				  post.excerpt = $sce.trustAsHtml(post.excerpt);
-			  	  post.content = $sce.trustAsHtml(post.content);
+					post.excerpt = $sce.trustAsHtml(post.excerpt);
+				  	post.content = $sce.trustAsHtml(post.content);
 
-			  	  resultsToBroadcast.push({
-			  	  	"post": post,
-			  	  	"aboutData": post.about_data
-			  	});
-			  
-			  	return resultsToBroadcast;
-			  	
-			  	i++;
+				  	var aboutTag = post.terms.about[0].slug;
 
-			  	});
+				  	var mediaCallUrl = "/media?filter[about]="+aboutTag;
+
+						WPRest.restCall(mediaCallUrl, "GET", {}, {
+							broadcastName: last ? "foundAbout" : "notDone", 
+							callback: function(mediaData) {
+							 console.log("Hittade om-oss media: ", mediaData);
+
+							  	 // broadcastName: "about";
+							  	resultsToBroadcast.push({
+							  	  	"media": mediaData,
+							  	  	"post": post,
+							  	  	"aboutData": post.about_data
+							  	});
+
+							 	if (last) {
+					
+								return resultsToBroadcast;
+								}
+						  	}
+					  	});
+
+			  		i++;
+
+				});
 
 			  }
-			
 			});
-
 		}
-
 	};
-
+	//return our factory object
 	return aboutServant;
-
 }]);
-
