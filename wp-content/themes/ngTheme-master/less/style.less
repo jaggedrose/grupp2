@@ -28,7 +28,7 @@ main:after {
   display: block;
 }
 footer, main:after {
-  height: 142px; 
+  height: 142px;
 }
 footer {
   background: #C97A0D;
@@ -60,15 +60,39 @@ nav {
 
 
 
+.bostadContent {
+  margin-top:15px; 
+  float:left; 
+  line-height:20px; 
+  background-color:#fcfbf9;
+  padding:8px 0 0 8px;
+}
+
+th {
+  background-color:#fcfbf9;
+}
+
+.center {
+  text-align: center
+}
+
+carousel {
+  height: 400px; 
+  overflow: hidden;
+}
+
+frontCarousel {
+  height:200px; 
+  width:300px; 
+  overflow:hidden;
+  }
+
 @media (max-width: 650px) {
   .thingbob {
     display: none;
   }
 }
 
-.center {
-  text-align: center
-}
 
 @main-color: #C97A0D; 
 @main-color-hover:  lighten(@main-color, 30%);
@@ -79,4 +103,8 @@ nav {
 
 .panel-default > .panel-heading {
 	.panel-heading{}background-color:@main-color-hover;
+}
+
+.margin_auto {
+  margin:auto;
 }
