@@ -23,7 +23,7 @@
    </section> -->
 
    <section class="row">
-   		<div class="col-md-4 col-lg-4" ng-repeat="model in aboutModels">
+   		<div class="col-xs-10 col-sm-6 col-md-4 col-lg-4" ng-repeat="model in aboutModels">
    			<article class="panel panel-default">
    				<div class="panel-heading">
    					<h3 class="panel-title">{{model.post.title}}</h3>
@@ -39,7 +39,7 @@
    				</div>
 
    				<ul class="list-group">
-				  <li class="list-group-item" ng-repeat="(key,val) in model.aboutData"><strong>{{key}}:</strong> {{val}}</li>
+				  <li class="list-group-item" ng-repeat="(key,val) in model.aboutData"><strong><span class="dataHeader">{{key | lowercase}}:</span></strong> {{val}}</li>
 				</ul>
 					   					
 
