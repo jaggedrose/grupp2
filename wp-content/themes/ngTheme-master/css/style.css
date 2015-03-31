@@ -6588,3 +6588,9 @@ nav {
 .center {
   text-align: center;
 }
+.headerColor {
+  background-color: #f6c279;
+}
+.panel-default > .panel-heading {
+  background-color: #f6c279;
+}

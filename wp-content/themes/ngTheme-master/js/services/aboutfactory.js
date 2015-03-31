@@ -42,9 +42,9 @@ app.factory("About", ["WPRest", "$sce", function(WPRest, $sce) {
 
 			  		console.log("Aboutfactory hittade om-oss poster: ", postData);
 
-			  	 for (var i = 0; i < postData.length; i++) {
+			  	for (var i = postData.length -1; i > 0; i--) {
 					if (!postData[i].terms.about) {
-					postData.splice(i, 1);
+						postData.splice(i, 1);
 				    }
 				}
 			  
@@ -56,12 +56,12 @@ app.factory("About", ["WPRest", "$sce", function(WPRest, $sce) {
 				  		var last = i === postData.length-1;
 				  		//if (post.terms.about) {
 
-					post.excerpt = $sce.trustAsHtml(post.excerpt);
-				  	post.content = $sce.trustAsHtml(post.content);
+							post.excerpt = $sce.trustAsHtml(post.excerpt);
+						  	post.content = $sce.trustAsHtml(post.content);
 
-				  	var aboutTag = post.terms.about[0].slug;
+						  	var aboutTag = post.terms.about[0].slug;
 
-				  	var mediaCallUrl = "/media?filter[about]="+aboutTag;
+						  	var mediaCallUrl = "/media?filter[about]="+aboutTag;
 
 						WPRest.restCall(mediaCallUrl, "GET", {}, {
 							broadcastName: last ? "foundAbout" : "notDone", 

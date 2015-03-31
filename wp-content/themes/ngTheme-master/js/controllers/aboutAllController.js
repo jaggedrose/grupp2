@@ -1,7 +1,7 @@
 app.controller("aboutAllController", ["$scope", "About", "SITE_INFO", "$routeParams", "$location", function ($scope, About, SITE_INFO, $routeParams, $location) {
 	console.log("aboutAllController is alive! params: ", $routeParams);
 
-	About.find($routeParams);
+	About.find();
 
 	$scope.partialsDir = SITE_INFO.partials;
 
@@ -9,7 +9,7 @@ app.controller("aboutAllController", ["$scope", "About", "SITE_INFO", "$routePar
 	$scope.$on("foundAbout", function(event, data) {
 
 		console.log("aboutAllController on foundPosts: ", data);
-		$scope.aboutMe = data;
+		$scope.aboutModels = data;
 		//$scope.aboutData = $scope.post.aboutData;
 	});
 

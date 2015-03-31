@@ -1,19 +1,54 @@
-  <div  class="row">
- 
-      <table class="table">
-
-        <tr ng-repeat="me in aboutMe">
+  
+<!--  	<section class="container-fluid ">
+ 	<div  class="row">
+      <table class="table table-responsive">
+        <tr ng-repeat="model in aboutModels">
           <td>{{me.post.title}}</td>
-          <td><img ng-src="{{me.media[0].source}}" style="margin:4px auto 0;" class="img-responsive img-thumbnail"></td>
-          <td><div ng-bind-html="me.post.content"></div>
+          <td><img ng-src="{{model.media[0].source}}" style="margin:4px auto 0;" class="img-responsive img-thumbnail"></td>
+          <td><div ng-bind-html="model.post.content"></div>
          </td>
         </tr>
       </table>
-      <table class="table" style="">
-      <tr>
-        <th style="background-color:#fcfbf9;" ng-repeat="(key,val) in about.about_data">{{key}}</th>
-      </tr>
-      <tr>
-        <td ng-repeat="(key,val) in about.about_data">{{val}}</td>
-      </tr>
-    </table>
+    </section>
+    <section> 
+	    <table class="table" style="">
+	      <tr>
+	        <th style="background-color:#fcfbf9;" ng-repeat="(key,val) in aboutModels[0].aboutData">{{key}}</th>
+	      </tr>
+	      <tr ng-repeat="about in aboutModels">
+	        <td ng-repeat="(key,val) in about.aboutData">{{val}}</td>
+	      </tr>
+	    </table>
+	</div>
+   </section> -->
+
+   <section class="row">
+   		<div class="col-md-4" ng-repeat="model in aboutModels">
+   			<article class="panel panel-default">
+   				<div class="panel-heading">
+   					<h3 class="panel-title">{{model.post.title}}</h3>
+
+   				</div>
+   					<img ng-src="{{model.media[0].source}}" style="margin:4px auto 0;" class="img-responsive img-thumbnail">
+   				<div class="panel-body" ng-bind-html="model.post.content">
+	   				<div class="panel-body">
+
+	   				</div>
+   				</div>
+
+   				<ul class="list-group">
+				  <li class="list-group-item" ng-repeat="(key,val) in model.aboutData"><strong>{{key}}:</strong> {{val}}</li>
+				</ul>
+					   					
+
+   				<!--<table class="table">
+   					<tr>
+				      <th style="background-color:#fcfbf9;" ng-repeat="(key,val) in model.aboutData">{{key}}</th>
+				    </tr>
+				    <tr>
+				      <td ng-repeat="(key,val) in model.aboutData">{{val}}</td>
+				    </tr>
+   				</table> -->
+   			</article>
+   		</div>
+   </section>
