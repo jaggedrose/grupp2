@@ -6576,6 +6576,15 @@ nav {
 .img-thumbnail {
   width: 250px;
 }
+.img-thumbnail-about {
+  width: 100px;
+  padding: 4px;
+  margin: 2px 16px 0 2px;
+  line-height: 1.42857143;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+}
 .contact .contactDel {
   padding-left: 50px;
   padding-bottom: 10px;
