@@ -6606,7 +6606,7 @@ carousel {
   height: 400px;
   overflow: hidden;
 }
-frontCarousel {
+.frontCarousel {
   height: 200px;
   width: 300px;
   overflow: hidden;
@@ -6630,4 +6630,7 @@ frontCarousel {
 }
 .TrHeader .dataHeader {
   background-color: #f6c279;
+}
+.bostadTitle {
+  width: 210px;
 }

@@ -1,6 +1,6 @@
 <section class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
       <!-- Put all search box filters in here!!! -->
       <div class="panel panel-default">
@@ -8,17 +8,17 @@
         <div class="panel-body">
       		<form>
       		
-      		  <div class="form-group">
+      		  <div class="form-group col-xs-12 col-sm-10 col-md-8 col-lg-6">
+              <label>Stad:  </label>
       		    <input type="text" ng-model="bostadFilters.bostadData.stad" class="form-control" placeholder="Sök efter stad...">
+
       		  </div>
-      		  <!-- <button type="submit" class="btn btn-default">Submit</button> -->      		  
-      		  
-            <div class="form-group">
-              <label>Antal Rum: </label>
-              <input type="text" ng-model="bostadFilters.bostadData.rum" placeholder="Sök efter antal rum...">
+            <div class="form-group col-xs-12 col-sm-10 col-md-8 col-lg-6">
+              <label>Antal Rum:  </label>
+              <input type="text" ng-model="bostadFilters.bostadData.rum" class="form-control" placeholder="Sök efter antal rum...">
             </div>
-      		  
-      		  <div class="form-group">
+      		  <!-- <button type="submit" class="btn btn-default">Submit</button> -->      		  
+      		  <div class="form-group col-xs-12 col-sm-10 col-md-8 col-lg-6">
               <label>Pris: </label>
               <div class="input-group">
                 <input type="number" ng-model="bostadPrisFilter.prisKlass[0]" class="form-control" aria-describedby="min-pris" placeholder="Min Pris">
@@ -27,9 +27,9 @@
               </div>
             </div>
 
-            <div class="form-group">
-              <p>Välj bostadstyp: </p>
-                <select ng-model="bostadFilters.bostadData.bostadstyp">
+            <div class="form-group col-xs-12 col-sm-10 col-md-8 col-lg-6">
+              <label>Välj bostadstyp: </label>
+                <select ng-model="bostadFilters.bostadData.bostadstyp" class="form-control">
                   <option value="">All</option>
                   <option value="lägenhet">Lägenhet</option>
                   <option value="villa">Villa</option>
@@ -53,13 +53,13 @@
       <!-- Table -->
       <table class="table">
         <tr>
-          <th>Fastigheter:</th>
+          <th class="bostadTitle">Fastigheter:</th>
           <th>Bild:</th>
           <th class="thingbob">Info:</th>
           <th>Gå till:</th>
         </tr>
         <tr ng-repeat="model in bostadModels | filter:bostadFilters | prisFilter:bostadPrisFilter.prisKlass">
-          <td>{{model.post.title}}</td>
+          <td >{{model.post.title}}</td>
           <td><img ng-src="{{model.media[0].source}}" style="margin:4px auto 0;" class="img-responsive img-thumbnail"></td>
           <td class="thingbob"><div ng-bind-html="model.post.excerpt"></div></td>
           <td><button class="btn btn-sm btn-success" ng-click="goTo('bostad/'+model.post.slug)">Mer info</button></td>
