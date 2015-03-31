@@ -6576,3 +6576,15 @@ nav {
 .img-thumbnail {
   width: 250px;
 }
+.contact .contactDel {
+  padding-left: 50px;
+  padding-bottom: 10px;
+}
+@media (max-width: 650px) {
+  .thingbob {
+    display: none;
+  }
+}
+.center {
+  text-align: center;
+}

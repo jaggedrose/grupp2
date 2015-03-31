@@ -1,12 +1,12 @@
 app.factory("Bostad", ["WPRest", "$sce", function(WPRest, $sce) {
 	
  //WPRest.restCall("/", "GET", {}, "WPRestWorks");
-
+var resultsToBroadcast = [];
  var bostadServant = {
- find : function(searchParams) {
+ find : function(searchParams, pageNo, startOver) {
 			searchParams = searchParams ? searchParams : {};
-
-			var callUrl = "/posts?filter[category_name]=bostad";
+			pageNo = pageNo ? pageNo : 1;
+			var callUrl = "/posts?page="+ pageNo +"&filter[category_name]=bostad";
 
 			for (var i in searchParams) {
 				callUrl += "&filter["+i+"]="+searchParams[i];
@@ -19,12 +19,20 @@ app.factory("Bostad", ["WPRest", "$sce", function(WPRest, $sce) {
 
 					// console.log("Bostad hittade bostad post: ", postData);
 
-					var resultsToBroadcast = [];
+					if (startOver || pageNo === 1) {
+						resultsToBroadcast.length = 0;
+					}
+
+					for (var i = postData.length - 1; i >= 0; i--) {
+						if (!postData[i].terms.bostad) {
+							postData.splice(i,1);
+						}
+					};
 
 					var i = 0;
 					postData.forEach(function(post) {
 						var last = i === postData.length-1; /*WATH*/
-						if (!post.terms.bostad) {return;} /*WHAT*/
+						
 
 						post.excerpt = $sce.trustAsHtml(post.excerpt);
 						post.content = $sce.trustAsHtml(post.content);

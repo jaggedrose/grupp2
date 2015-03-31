@@ -1,5 +1,19 @@
-<section class="container">
   <div  class="row">
+ 
+      <table class="table">
 
-  </div>
-</section>
+        <tr ng-repeat="me in aboutMe">
+          <td>{{me.post.title}}</td>
+          <td><img ng-src="{{me.media[0].source}}" style="margin:4px auto 0;" class="img-responsive img-thumbnail"></td>
+          <td><div ng-bind-html="me.post.content"></div>
+         </td>
+        </tr>
+      </table>
+      <table class="table" style="">
+      <tr>
+        <th style="background-color:#fcfbf9;" ng-repeat="(key,val) in about.about_data">{{key}}</th>
+      </tr>
+      <tr>
+        <td ng-repeat="(key,val) in about.about_data">{{val}}</td>
+      </tr>
+    </table>

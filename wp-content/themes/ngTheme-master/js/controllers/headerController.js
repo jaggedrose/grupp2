@@ -4,6 +4,11 @@ app.controller("headerController", ["$scope", "$location", "Menus", "SITE_INFO",
 
 	// console.log("headerController is alive!");
 	// console.log("SITE_INFO: ", SITE_INFO);
+ $scope.isCollapsed = true;
+
+	$scope.collapseNav = function() {
+		$scope.isCollapsed = !$scope.isCollapsed;
+	};
 
 	//get the menuLinks for menuId 2 using WPRest
 	Menus.get(2);
