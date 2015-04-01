@@ -1,5 +1,5 @@
 app.controller("bostadsListController", ["$scope", "Bostad", "SITE_INFO", "$routeParams", "$location", function ($scope, Bostad, SITE_INFO, $routeParams, $location) {
-	console.log("bostadsListController is alive! params: ", $routeParams);
+	// console.log("bostadsListController is alive! params: ", $routeParams);
 
 
 	$scope.partialsDir = SITE_INFO.partials;
@@ -22,7 +22,7 @@ app.controller("bostadsListController", ["$scope", "Bostad", "SITE_INFO", "$rout
 	Bostad.find($routeParams);
 	$scope.$on("foundBostad", function(event, data) {
 
-		console.log("BostadsController on foundBostad: ", data);
+		// console.log("BostadsController on foundBostad: ", data);
 		$scope.bostadModels = data;
 		pageNo++;
 		Bostad.find($routeParams, pageNo);
