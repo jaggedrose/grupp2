@@ -6589,6 +6589,10 @@ nav {
   padding-left: 50px;
   padding-bottom: 10px;
 }
+/*Detalj bostad carousel*/
+.propertyCarousel img {
+  margin: 15px auto 0;
+}
 .bostadContent {
   margin-top: 15px;
   float: left;
@@ -6606,10 +6610,39 @@ carousel {
   height: 400px;
   overflow: hidden;
 }
+/*Home View*/
 .frontCarousel {
-  height: 200px;
-  width: 300px;
+  height: 450px;
+  width: 550px;
   overflow: hidden;
+  margin-top: 30px;
+}
+.frontCarousel .carousel-control.left,
+.frontCarousel .carousel-control.right {
+  background: none;
+}
+.homeTitle {
+  margin: 50px;
+}
+@media (max-width: 990px) {
+  .homeTitle {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #777777;
+  }
+}
+.textBox div {
+  border: 1px solid #777777;
+  border-radius: 3px;
+  padding: 6px 20px 10px;
+  min-height: 230px;
+}
+@media (max-width: 990px) {
+  .textBox div {
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #777777;
+    min-height: initial;
+  }
 }
 @media (max-width: 650px) {
   .thingbob {
@@ -6617,10 +6650,10 @@ carousel {
   }
 }
 .headerColor {
-  background-color: #f6c279;
+  background-color: #f3ac49;
 }
 .panel-default > .panel-heading {
-  background-color: #f6c279;
+  background-color: #f3ac49;
 }
 .margin_auto {
   margin: auto;
@@ -6629,7 +6662,7 @@ carousel {
   text-transform: uppercase;
 }
 .TrHeader .dataHeader {
-  background-color: #f6c279;
+  background-color: #f3ac49;
 }
 .bostadTitle {
   width: 210px;
