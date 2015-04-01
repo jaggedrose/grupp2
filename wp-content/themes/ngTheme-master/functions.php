@@ -306,12 +306,13 @@ add_filter( 'json_prepare_post', function ($data, $post, $context) {
 add_filter( 'json_prepare_post', function ($data, $post, $context) {
 
   $data['about_data'] = array(
+    'titel' => get_post_meta( $post['ID'], 'titel' , true),
     'telefon' => get_post_meta( $post['ID'], 'telefon' , true),
     'mobil' => get_post_meta( $post['ID'], 'mobil' , true),
     'email' => get_post_meta( $post['ID'], 'email' , true),
   );
   return $data;
-}, 3, 3 );
+}, 4, 3 );
 
 
 
