@@ -6576,21 +6576,61 @@ nav {
 .img-thumbnail {
   width: 250px;
 }
+.img-thumbnail-about {
+  width: 120px;
+  padding: 4px;
+  margin: 2px 16px 0 2px;
+  line-height: 1.42857143;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+}
 .contact .contactDel {
   padding-left: 50px;
   padding-bottom: 10px;
+}
+.bostadContent {
+  margin-top: 15px;
+  float: left;
+  line-height: 20px;
+  background-color: #fcfbf9;
+  padding: 8px 0 0 8px;
+}
+th {
+  background-color: #fcfbf9;
+}
+.center {
+  text-align: center;
+}
+carousel {
+  height: 400px;
+  overflow: hidden;
+}
+.frontCarousel {
+  height: 200px;
+  width: 300px;
+  overflow: hidden;
 }
 @media (max-width: 650px) {
   .thingbob {
     display: none;
   }
 }
-.center {
-  text-align: center;
-}
 .headerColor {
   background-color: #f6c279;
 }
 .panel-default > .panel-heading {
   background-color: #f6c279;
+}
+.margin_auto {
+  margin: auto;
+}
+.dataHeader:first-letter {
+  text-transform: uppercase;
+}
+.TrHeader .dataHeader {
+  background-color: #f6c279;
+}
+.bostadTitle {
+  width: 210px;
 }

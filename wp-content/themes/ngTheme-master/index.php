@@ -3,8 +3,8 @@
 <head>
   <!-- base href must correspond to the base path of your wordpress site -->
   <link rel="stylesheet" href="<?php echo(THEME_HTTP_ROOT)?>js/libs/ui-bootstrap-tpls-0.12.1.js">
-  <!--<link rel="stylesheet" href="<?php echo(THEME_HTTP_ROOT)?>js/libs/ui-bootstrap-tpls-0.12.1.js">-->
-  <base href="/grupp2/">
+ 
+   <base href="/grupp2/">
   <title>ngTheme</title>
   <?php wp_head(); ?>
 </head>
