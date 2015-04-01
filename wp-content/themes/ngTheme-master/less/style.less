@@ -67,6 +67,12 @@ nav {
 	}
 }
 
+/*Detalj bostad carousel*/
+.propertyCarousel {
+  img {
+    margin:15px auto 0;
+  }
+}
 
 
 
@@ -91,11 +97,45 @@ carousel {
   overflow: hidden;
 }
 
+
+/*Home View*/
+
 .frontCarousel {
-  height:200px; 
-  width:300px; 
-  overflow:hidden;
+  height: 450px; 
+  width: 550px; 
+  overflow: hidden;
+  margin-top: 30px;
+
+  .carousel-control.left, .carousel-control.right {
+    background: none;
   }
+}
+
+.homeTitle {
+  margin: 50px;
+
+  @media (max-width: 990px){
+    padding-bottom: 30px;
+    border-bottom: 1px solid #777777;
+  }
+}
+
+.textBox {
+  div {
+    border: 1px solid #777777;
+    border-radius: 3px;
+    padding: 6px 20px 10px;
+    min-height: 230px;
+
+    @media (max-width: 990px) {
+      border: none;
+      border-radius: 0;
+      border-bottom: 1px solid #777777;
+      min-height: initial;
+    }
+  }
+}
+
 
 @media (max-width: 650px) {
   .thingbob {
@@ -105,7 +145,7 @@ carousel {
 
 
 @main-color: #C97A0D; 
-@main-color-hover:  lighten(@main-color, 30%);
+@main-color-hover:  lighten(@main-color, 20%);
 
 .headerColor{
 	background-color:@main-color-hover;
@@ -133,3 +173,4 @@ carousel {
 .bostadTitle {
   width: 210px;
 }
+

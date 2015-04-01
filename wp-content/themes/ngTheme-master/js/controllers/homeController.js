@@ -27,7 +27,7 @@ app.controller("homeController", ["$scope", "Pages", "Bostad", "$sce", "$filter"
 	// EXAMPLE LISTENER TO A $broadcast COMING FROM WPRest SERVICE!!!
 	//listening for the "gotPageData" broadcast on $http success
 	$scope.$on("gotPageData", function(event, data) {
-		console.log("homeController on gotPageData: ", data);
+		// console.log("homeController on gotPageData: ", data);
 		$scope.page = data[0];
 
 		$scope.customContent = $scope.page.customContent;

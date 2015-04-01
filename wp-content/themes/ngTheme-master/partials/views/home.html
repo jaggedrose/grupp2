@@ -14,11 +14,11 @@
 
     <div class="row">
       <article class="col-xs-12 col-sm-10 col-md-8 col-lg-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-2 col-lg-offset-2">
-        <h2 class="center">{{page.title}}</h2>
+        <h2 class="center homeTitle">{{page.title}}</h2>
         <!-- <div class="content" ng-bind-html="page.content"></div> -->
       </article>
 
-      <section ng-repeat="(key, val) in customContent" class="col-md-4">
+      <section ng-repeat="(key, val) in customContent" class="col-md-4 textBox">
         <div id="{{key}}" class="content" ng-bind-html="val"></div>
       </section>
     </div>
