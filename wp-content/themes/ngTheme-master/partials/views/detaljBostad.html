@@ -9,10 +9,10 @@
       <tr>
         <td ng-repeat="(key,val) in bostad.bostadData">{{val}}</td>
       </tr>
-      <tr><td><button class="btn btn-sm btn-success" ng-click="goTo('bostad/')">Tillbaka</button>
-</td></tr>
+
     </table>
     <div class="bostadContent" ng-bind-html="bostad.post.content"></div>
+    <center><div class="btn"><a href back-button><button class="btn btn-sm btn-success">Tillbaka till fastigheter</button></a></div></center>
   </section>
 
    <section class="col-xs-12 col-sm-10 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-0 carousel">
@@ -27,3 +27,4 @@
     </section>
 </section>
 
+   

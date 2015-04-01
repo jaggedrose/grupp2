@@ -6593,6 +6593,10 @@ nav {
 .propertyCarousel img {
   margin: 15px auto 0;
 }
+.propertyCarousel .carousel-control.left,
+.propertyCarousel .carousel-control.right {
+  background: none;
+}
 .bostadContent {
   margin-top: 15px;
   float: left;
@@ -6665,8 +6669,5 @@ carousel {
   background-color: #f3ac49;
 }
 .bostadTitle {
-  width: 210px;
-}
-.bostadGo {
   width: 210px;
 }
