@@ -6609,6 +6609,10 @@ nav {
   background-color: #fcfbf9;
   padding: 8px 0 0 8px;
 }
+.detaljBostadTable {
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+}
 th {
   background-color: #fcfbf9;
 }
