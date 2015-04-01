@@ -31,7 +31,8 @@ footer, main:after {
   height: 142px;
 }
 footer {
-  background: #C97A0D;
+  //background: #c97a0d;
+  background:@main-color-hover;
 }
 
 
@@ -44,9 +45,10 @@ nav {
   font-size: 25px;
 }
 
-.img-thumbnail {
-  
-  width:250px;
+.img-thumbnail { 
+width: 175px;
+max-width: 175px !important;
+
 }
 
 .img-thumbnail-about {
@@ -81,8 +83,6 @@ nav {
     background: none;
   }
 }
-
-
 
 .bostadContent {
   margin-top:15px; 
@@ -145,7 +145,7 @@ carousel {
 }
 
 
-@media (max-width: 650px) {
+@media (max-width: 750px) {
   .thingbob {
     display: none;
   }
@@ -179,6 +179,35 @@ carousel {
 }
 
 .bostadTitle {
-  width: 210px;
+  width: 250px;
 }
 
+.bostadGo {
+  margin-top:55px;
+  margin-right:6px;
+  padding-top: 23px;
+  padding-bottom: 23px;
+  padding-left: 12px;
+  padding-right: 12px;
+  //border: 1px solid #fcfbf9;
+  //border-radius: 3px;
+}
+
+.bostadTableHeader {
+  background-color:@main-color-hover;
+}
+
+.bostadTableContent {
+  background-color:#fcfbf9;
+}
+
+.bostadTableTitle {
+  background-color:#fcfbf9;
+  font-weight:bold;
+  font-size:150%;
+  color: #a0522d;
+}
+
+.filterPanel {
+  background-color:#fcfbf9;
+}

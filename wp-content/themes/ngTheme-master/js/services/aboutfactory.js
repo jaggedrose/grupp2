@@ -40,7 +40,7 @@ app.factory("About", ["WPRest", "$sce", function(WPRest, $sce) {
 			  broadcastName: "Important NOT!",
 			  callback: function(postData) {
 
-			  		console.log("Aboutfactory hittade om-oss poster: ", postData);
+			  	//	console.log("Aboutfactory hittade om-oss poster: ", postData);
 
 			  	for (var i = postData.length -1; i > 0; i--) {
 					if (!postData[i].terms.about) {
@@ -66,7 +66,7 @@ app.factory("About", ["WPRest", "$sce", function(WPRest, $sce) {
 						WPRest.restCall(mediaCallUrl, "GET", {}, {
 							broadcastName: last ? "foundAbout" : "notDone", 
 							callback: function(mediaData) {
-							 console.log("Hittade om-oss media: ", mediaData);
+							 //console.log("Hittade om-oss media: ", mediaData);
 
 							  	 // broadcastName: "about";
 							  	resultsToBroadcast.push({

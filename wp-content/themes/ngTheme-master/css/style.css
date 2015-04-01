@@ -6564,7 +6564,7 @@ main:after {
   height: 142px;
 }
 footer {
-  background: #C97A0D;
+  background: #f3ac49;
 }
 .headerLogo {
   margin: 10px auto 10px;
@@ -6574,7 +6574,8 @@ nav {
   font-size: 25px;
 }
 .img-thumbnail {
-  width: 250px;
+  width: 175px;
+  max-width: 175px !important;
 }
 .img-thumbnail-about {
   width: 120px;
@@ -6652,7 +6653,7 @@ carousel {
     min-height: initial;
   }
 }
-@media (max-width: 650px) {
+@media (max-width: 750px) {
   .thingbob {
     display: none;
   }
@@ -6673,5 +6674,28 @@ carousel {
   background-color: #f3ac49;
 }
 .bostadTitle {
-  width: 210px;
+  width: 250px;
+}
+.bostadGo {
+  margin-top: 55px;
+  margin-right: 6px;
+  padding-top: 23px;
+  padding-bottom: 23px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.bostadTableHeader {
+  background-color: #f3ac49;
+}
+.bostadTableContent {
+  background-color: #fcfbf9;
+}
+.bostadTableTitle {
+  background-color: #fcfbf9;
+  font-weight: bold;
+  font-size: 150%;
+  color: #a0522d;
+}
+.filterPanel {
+  background-color: #fcfbf9;
 }
