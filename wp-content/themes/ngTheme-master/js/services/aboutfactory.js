@@ -33,7 +33,7 @@ app.factory("About", ["WPRest", "$sce", function(WPRest, $sce) {
 			 	first = false;
 				
 			}
-			console.log("om-oss metoden ropar på REST url: ", callUrl);
+			//console.log("om-oss metoden ropar på REST url: ", callUrl);
 
 
 			WPRest.restCall(callUrl, "GET", {}, {
