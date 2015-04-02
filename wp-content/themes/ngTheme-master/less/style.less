@@ -31,8 +31,7 @@ footer, main:after {
   height: 142px;
 }
 footer {
-  //background: #c97a0d;
-  background:@main-color-hover;
+  background-color: @main-color;
 }
 
 
@@ -157,15 +156,15 @@ carousel {
 }
 
 
-@main-color: #C97A0D; 
-@main-color-hover:  lighten(@main-color, 20%);
+@main-color: #75890c; 
+@main-color-lighten:  lighten(@main-color, 50%);
 
 .headerColor{
-	background-color:@main-color-hover;
+	background-color:@main-color-lighten;
 }
 
 .panel-default > .panel-heading {
-	.panel-heading{}background-color:@main-color-hover;
+	.panel-heading{}background-color:@main-color-lighten;
 }
 
 .margin_auto {
@@ -178,16 +177,23 @@ carousel {
 
 .TrHeader{
 	.dataHeader{
-		background-color:@main-color-hover;
-	}
-	
+		background-color:@main-color-lighten;
+	}	
+}
+
+/*Property List View*/
+.backToBtn {
+  background-color: @main-color;
+  color: #ffffff;
 }
 
 .bostadTitle {
   width: 250px;
 }
 
-.bostadGo {
+.bostadGoBtn {
+  background-color: @main-color;
+  color: #ffffff;
   margin-top:55px;
   margin-right:6px;
   padding-top: 23px;
@@ -199,7 +205,7 @@ carousel {
 }
 
 .bostadTableHeader {
-  background-color:@main-color-hover;
+  background-color:@main-color-lighten;
 }
 
 .bostadTableContent {
@@ -210,7 +216,7 @@ carousel {
   background-color:#fcfbf9;
   font-weight:bold;
   font-size:150%;
-  color: #a0522d;
+  color: @main-color;
 }
 
 .filterPanel {

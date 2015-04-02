@@ -6564,7 +6564,7 @@ main:after {
   height: 142px;
 }
 footer {
-  background: #f3ac49;
+  background-color: #75890c;
 }
 .headerLogo {
   margin: 10px auto 10px;
@@ -6663,10 +6663,10 @@ carousel {
   }
 }
 .headerColor {
-  background-color: #f3ac49;
+  background-color: #e8f69e;
 }
 .panel-default > .panel-heading {
-  background-color: #f3ac49;
+  background-color: #e8f69e;
 }
 .margin_auto {
   margin: auto;
@@ -6675,12 +6675,19 @@ carousel {
   text-transform: uppercase;
 }
 .TrHeader .dataHeader {
-  background-color: #f3ac49;
+  background-color: #e8f69e;
+}
+/*Property List View*/
+.backToBtn {
+  background-color: #75890c;
+  color: #ffffff;
 }
 .bostadTitle {
   width: 250px;
 }
-.bostadGo {
+.bostadGoBtn {
+  background-color: #75890c;
+  color: #ffffff;
   margin-top: 55px;
   margin-right: 6px;
   padding-top: 23px;
@@ -6689,7 +6696,7 @@ carousel {
   padding-right: 12px;
 }
 .bostadTableHeader {
-  background-color: #f3ac49;
+  background-color: #e8f69e;
 }
 .bostadTableContent {
   background-color: #fcfbf9;
@@ -6698,7 +6705,7 @@ carousel {
   background-color: #fcfbf9;
   font-weight: bold;
   font-size: 150%;
-  color: #a0522d;
+  color: #75890c;
 }
 .filterPanel {
   background-color: #fcfbf9;

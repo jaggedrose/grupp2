@@ -69,7 +69,7 @@
           <td class="bostadTableTitle">{{model.post.title}}</td>
           <td><img ng-src="{{model.media[0].source}}" style="margin:4px auto 0;" class="img-responsive img-thumbnail"></td>
           <td class="thingbob bostadTableContent"><div ng-bind-html="model.post.excerpt"></div></td>
-          <td class="bostadTableContent"><button class="btn btn-sm btn-warning bostadGo" ng-click="goTo('bostad/'+model.post.slug)">Mer info</button></td>
+          <td class="bostadTableContent"><button class="btn btn-sm btn-default bostadGoBtn" ng-click="goTo('bostad/'+model.post.slug)">Mer info</button></td>
         </tr>
       </table>
     </div>
