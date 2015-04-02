@@ -4,8 +4,8 @@
   <!-- base href must correspond to the base path of your wordpress site -->
   <link rel="stylesheet" href="<?php echo(THEME_HTTP_ROOT)?>js/libs/ui-bootstrap-tpls-0.12.1.js">
  
-  <link href='http://fonts.googleapis.com/css?family=Nobile:700' rel='stylesheet' type='text/css'>
-  
+  <link href='http://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>
+
    <base href="/grupp2/">
   <title>ngTheme</title>
   <?php wp_head(); ?>
