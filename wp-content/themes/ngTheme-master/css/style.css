@@ -6717,8 +6717,8 @@ th {
   padding: 8px 0 0 8px;
 }
 @media (max-width: 530px) {
-  .tabletext {
-    font-size: 10px;
+  .hideMe {
+    display: none;
   }
 }
 /*About View*/
