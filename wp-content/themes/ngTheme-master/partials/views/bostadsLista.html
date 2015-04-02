@@ -67,7 +67,7 @@
         </tr>
         <tr ng-repeat="model in bostadModels | filter:bostadFilters | prisFilter:bostadPrisFilter.prisKlass | yta_m2Filter:bostadYta_m2Filter.yta_m2Klass">
           <td class="bostadTableTitle">{{model.post.title}}</td>
-          <td><img ng-src="{{model.media[0].source}}" style="margin:4px auto 0;" class="img-responsive img-thumbnail"></td>
+          <td><img ng-src="{{model.media[0].source}}" class="img-responsive img-thumbnail"></td>
           <td class="thingbob bostadTableContent"><div ng-bind-html="model.post.excerpt"></div></td>
           <td class="bostadTableContent"><button class="btn btn-sm btn-default bostadGoBtn" ng-click="goTo('bostad/'+model.post.slug)">Mer info</button></td>
         </tr>

@@ -6537,13 +6537,14 @@ button.close {
 
   Inspired by: https://1fix.io/blog/2014/11/05/angularjs-json-api-wp-theme/
 */
-/* ngBootrap css fix */
+/* ngBootstrap css fix */
 .nav,
 .pagination,
 .carousel,
 .panel-title a {
   cursor: pointer;
 }
+/*Theme main color*/
 /* Sticky footer */
 html,
 body {
@@ -6566,66 +6567,16 @@ main:after {
 footer {
   background-color: #75890c;
 }
+/*Header*/
 .headerLogo {
   margin: 10px auto 10px;
+}
+.navColor {
+  background-color: #e8f69e;
 }
 nav {
   font-family: 'Rokkitt', serif;
   font-size: 25px;
-}
-.img-thumbnail {
-  width: 175px;
-  max-width: 175px !important;
-}
-.img-thumbnail-about {
-  width: 120px;
-  padding: 4px;
-  margin: 2px 16px 0 2px;
-  line-height: 1.42857143;
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
-  border-radius: 4px;
-}
-.margin-bottom {
-  margin-bottom: 15px;
-}
-/*Contact View*/
-.contact .contactDel {
-  padding-left: 50px;
-  padding-bottom: 10px;
-}
-#huge_it_google_map1_container {
-  margin: 20px;
-}
-/*Detalj bostad carousel*/
-.propertyCarousel img {
-  margin: 15px auto 0;
-}
-.propertyCarousel .carousel-control.left,
-.propertyCarousel .carousel-control.right {
-  background: none;
-}
-.bostadContent {
-  margin-top: 15px;
-  float: left;
-  line-height: 20px;
-  background-color: #fcfbf9;
-  padding: 8px 0 0 8px;
-}
-.detaljBostadTable {
-  border: 1px solid #dddddd;
-  border-radius: 4px;
-  width: 100%;
-}
-th {
-  background-color: #fcfbf9;
-}
-.center {
-  text-align: center;
-}
-carousel {
-  height: 400px;
-  overflow: hidden;
 }
 /*Home View*/
 .frontCarousel {
@@ -6661,30 +6612,32 @@ carousel {
     min-height: initial;
   }
 }
-@media (max-width: 750px) {
-  .thingbob {
-    display: none;
-  }
+/*Property List View*/
+.img-thumbnail {
+  width: 175px;
+  margin: 4px auto 0;
+  max-width: 175px !important;
 }
-.headerColor {
-  background-color: #e8f69e;
+th {
+  background-color: #fcfbf9;
 }
 .panel-default > .panel-heading {
   background-color: #e8f69e;
 }
-.margin_auto {
-  margin: auto;
+.filterPanel {
+  background-color: #fcfbf9;
 }
-.dataHeader:first-letter {
-  text-transform: uppercase;
-}
-.TrHeader .dataHeader {
+.bostadTableHeader {
   background-color: #e8f69e;
 }
-/*Property List View*/
-.backToBtn {
-  background-color: #75890c;
-  color: #ffffff;
+.bostadTableContent {
+  background-color: #fcfbf9;
+}
+.bostadTableTitle {
+  background-color: #fcfbf9;
+  font-weight: bold;
+  font-size: 150%;
+  color: #75890c;
 }
 .bostadTitle {
   width: 250px;
@@ -6699,18 +6652,79 @@ carousel {
   padding-left: 12px;
   padding-right: 12px;
 }
-.bostadTableHeader {
+@media (max-width: 750px) {
+  .thingbob {
+    display: none;
+  }
+}
+/*Property View*/
+.propertyCarousel img {
+  margin: 15px auto 0;
+}
+.propertyCarousel .carousel-control.left,
+.propertyCarousel .carousel-control.right {
+  background: none;
+}
+.backToBtn {
+  background-color: #75890c;
+  color: #ffffff;
+}
+.detaljBostadTable {
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  width: 100%;
+}
+.TrHeader .dataHeader {
   background-color: #e8f69e;
 }
-.bostadTableContent {
-  background-color: #fcfbf9;
+.dataHeader:first-letter {
+  text-transform: uppercase;
 }
-.bostadTableTitle {
+.bostadContent {
+  margin-top: 15px;
+  float: left;
+  line-height: 20px;
   background-color: #fcfbf9;
-  font-weight: bold;
-  font-size: 150%;
-  color: #75890c;
+  padding: 8px 0 0 8px;
 }
-.filterPanel {
-  background-color: #fcfbf9;
+/*About View*/
+.img-thumbnail-about {
+  width: 120px;
+  padding: 4px;
+  margin: 2px 16px 0 2px;
+  line-height: 1.42857143;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+}
+.textLeft {
+  text-align: left;
+}
+.floatLeft {
+  float: left;
+}
+.panelContent {
+  margin: 5px;
+}
+/*Contact View*/
+.contact .contactDel {
+  padding-left: 50px;
+  padding-bottom: 10px;
+}
+#huge_it_google_map1_container {
+  margin: 20px;
+}
+/*Used here & there*/
+.margin_auto {
+  margin: auto;
+}
+.center {
+  text-align: center;
+}
+.margin-bottom {
+  margin-bottom: 15px;
+}
+carousel {
+  height: 400px;
+  overflow: hidden;
 }
