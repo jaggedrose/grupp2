@@ -6586,6 +6586,9 @@ nav {
   border: 1px solid #dddddd;
   border-radius: 4px;
 }
+.margin-bottom {
+  margin-bottom: 15px;
+}
 /*Contact View*/
 .contact .contactDel {
   padding-left: 50px;
@@ -6612,6 +6615,7 @@ nav {
 .detaljBostadTable {
   border: 1px solid #dddddd;
   border-radius: 4px;
+  width: 100%;
 }
 th {
   background-color: #fcfbf9;
