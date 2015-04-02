@@ -3,9 +3,9 @@ app.filter('prisFilter', [function () {
     if (!bostads) { return; }
      // console.log("bostads: ", bostads);
      // console.log("range: ", range);
-    
+
     var filtered = [];
-    
+
     if (range.length === 0) {
       return bostads;
     }

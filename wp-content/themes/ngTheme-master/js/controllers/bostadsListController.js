@@ -8,11 +8,19 @@ app.controller("bostadsListController", ["$scope", "Bostad", "SITE_INFO", "$rout
 	$scope.bostadPrisFilter = {
 		prisKlass : []
 	};
-	
+
+    $scope.bostadYta_m2Filter = {
+        yta_m2Klass : []
+    };
+
 	$scope.filterReset = function() {
 		$scope.bostadPrisFilter = {
 			prisKlass : []
 		};
+
+        $scope.bostadYta_m2Filter = {
+            yta_m2Klass : []
+        };
 	};
 
 
@@ -31,5 +39,5 @@ app.controller("bostadsListController", ["$scope", "Bostad", "SITE_INFO", "$rout
 	$scope.goTo = function(url) {
 		$location.url(url);
 	};
-	
+
 }]);
