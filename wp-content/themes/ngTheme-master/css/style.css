@@ -6650,7 +6650,7 @@ nav {
 th {
   background-color: #fcfbf9;
 }
-.panel-default > .panel-heading {
+.panel-default > .panel-heading .panel-heading {
   background-color: #e8f69e;
 }
 .filterPanel {
@@ -6665,7 +6665,7 @@ th {
 .bostadTableTitle {
   background-color: #fcfbf9;
   font-weight: bold;
-  font-size: 150%;
+  font-size: 100%;
   color: #75890c;
 }
 .bostadTitle {
