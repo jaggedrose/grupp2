@@ -6584,6 +6584,12 @@ main:after {
 footer {
   background-color: #75890c;
 }
+footer #footer-return a {
+  color: #e8f69e;
+}
+footer #footer-credits {
+  color: #ffffff;
+}
 /*Header*/
 .headerLogo {
   margin: 10px auto 10px;

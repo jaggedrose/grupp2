@@ -17,6 +17,8 @@
 /*Theme main color*/
 @main-color: #75890c; 
 @main-color-lighten:  lighten(@main-color, 50%);
+@background-grey: #fcfbf9;
+@border-dark-grey: #777777;
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Rokkitt', serif;
@@ -52,6 +54,16 @@ footer, main:after {
 }
 footer {
   background-color: @main-color;
+
+  #footer-return {
+    a {
+      color: @main-color-lighten;
+    }
+  }
+
+  #footer-credits {
+    color: #ffffff;
+  }
 }
 
 
@@ -87,13 +99,13 @@ nav {
 
   @media (max-width: 990px){
     padding-bottom: 30px;
-    border-bottom: 1px solid #777777;
+    border-bottom: 1px solid @border-dark-grey;
   }
 }
 
 .textBox {
   div {
-    border: 1px solid #777777;
+    border: 1px solid @border-dark-grey;
     border-radius: 3px;
     padding: 6px 20px 10px;
     min-height: 230px;
@@ -101,7 +113,7 @@ nav {
     @media (max-width: 990px) {
       border: none;
       border-radius: 0;
-      border-bottom: 1px solid #777777;
+      border-bottom: 1px solid @border-dark-grey;
       min-height: initial;
     }
   }
@@ -116,7 +128,7 @@ nav {
 }
 
 th {
-  background-color:#fcfbf9;
+  background-color:@background-grey;
 }
 
 .panel-default > .panel-heading {
@@ -124,7 +136,7 @@ th {
 }
 
 .filterPanel {
-  background-color:#fcfbf9;
+  background-color:@background-grey;
 }
 
 .bostadTableHeader {
@@ -132,11 +144,11 @@ th {
 }
 
 .bostadTableContent {
-  background-color:#fcfbf9;
+  background-color:@background-grey;
 }
 
 .bostadTableTitle {
-  background-color:#fcfbf9;
+  background-color:@background-grey;
   font-weight:bold;
   font-size:150%;
   color: @main-color;
@@ -199,7 +211,7 @@ th {
   margin-top:15px; 
   float:left; 
   line-height:20px; 
-  background-color:#fcfbf9;
+  background-color:@background-grey;
   padding:8px 0 0 8px;
 }
 
