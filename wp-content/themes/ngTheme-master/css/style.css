@@ -6740,6 +6740,9 @@ th {
   padding-left: 50px;
   padding-bottom: 10px;
 }
+.contact .contactDel a {
+  color: #000;
+}
 #huge_it_google_map1_container {
   margin: 20px;
 }
