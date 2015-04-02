@@ -6716,6 +6716,11 @@ th {
   background-color: #fcfbf9;
   padding: 8px 0 0 8px;
 }
+@media (max-width: 530px) {
+  .tabletext {
+    font-size: 10px;
+  }
+}
 /*About View*/
 .img-thumbnail-about {
   width: 120px;
