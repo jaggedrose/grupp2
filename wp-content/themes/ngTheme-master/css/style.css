@@ -6631,7 +6631,7 @@ nav {
   border: 1px solid #777777;
   border-radius: 3px;
   padding: 6px 20px 10px;
-  min-height: 230px;
+  min-height: 265px;
 }
 @media (max-width: 990px) {
   .textBox div {
