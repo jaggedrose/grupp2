@@ -6742,14 +6742,14 @@ th {
 }
 /*Contact View*/
 .contact .contactDel {
-  padding-left: 50px;
   padding-bottom: 10px;
+  margin: 0 auto;
 }
 .contact .contactDel a {
   color: #000;
 }
 #huge_it_google_map1_container {
-  margin: 20px;
+  margin: 20px auto;
 }
 /*Used here & there*/
 .margin_auto {
@@ -6767,4 +6767,5 @@ carousel {
 }
 .container {
   margin-bottom: 20px;
+  margin: 0 auto;
 }
