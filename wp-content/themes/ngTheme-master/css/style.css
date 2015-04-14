@@ -6699,6 +6699,12 @@ th {
 .propertyCarousel .carousel-control.right {
   background: none;
 }
+@media (max-width: 530px) {
+  .propertyCarousel {
+    width: 350px;
+    margin-left: -10px;
+  }
+}
 .backToBtn {
   background-color: #75890c;
   color: #ffffff;
@@ -6709,11 +6715,20 @@ th {
 }
 @media (max-width: 530px) {
   .detaljBostadTable {
-    font-size: 90%;
+    font-size: 88%;
   }
+}
+.table {
+  width: auto;
 }
 .TrHeader .dataHeader {
   background-color: #e8f69e;
+  width: auto;
+}
+@media (max-width: 530px) {
+  .TrHeader {
+    padding: 0 0 0 0;
+  }
 }
 .dataHeader:first-letter {
   text-transform: uppercase;
@@ -6724,6 +6739,11 @@ th {
   line-height: 20px;
   background-color: #fcfbf9;
   padding: 8px 0 0 8px;
+}
+@media (max-width: 530px) {
+  .bostadContent {
+    width: 330px;
+  }
 }
 .table-responsive {
   border: 0px solid #ffffff;

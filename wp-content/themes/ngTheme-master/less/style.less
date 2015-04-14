@@ -214,14 +214,23 @@ th {
   border-radius: 14px;
   //width: 100%;
     @media(max-width: 530px){
-  font-size:90%;
-  }
+    font-size:88%;
+    }
+}
+
+.table {
+  
+  width:auto;
 }
 
 .TrHeader{
   .dataHeader{
     background-color:@main-color-lighten;
+   width:auto;
   } 
+  @media(max-width: 530px){
+  padding:0 0 0 0;
+  }
 }
 
 .dataHeader:first-letter{
@@ -234,6 +243,9 @@ th {
   line-height:20px; 
   background-color:@background-grey;
   padding:8px 0 0 8px;
+  @media(max-width: 530px){
+  width:330px
+  }
 }
 
 .table-responsive {

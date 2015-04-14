@@ -2,8 +2,8 @@
   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
     <h2 class="center">{{bostad.post.title}}</h2>
    
-    <section class="col-xs-12 col-sm-10 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-0">
-    <div class="table-responsive">
+    <section class="col-xs-12 col-sm-10 col-md-6 col-lg-6">
+    
       <table class="table detaljBostadTable">
       <tr class="TrHeader">
         <th class="dataHeader" ng-class="{badkar: 'hideMe'}[key]" ng-repeat="(key,val) in bostad.bostadData">{{key | lowercase}}</th>
@@ -13,7 +13,7 @@
       </tr>
 
     </table>
-    </div>
+   
     <div class="bostadContent" ng-bind-html="bostad.post.content"></div>
     <center><div class="btn"><a href back-button><button class="btn btn-default btn-sm backToBtn">Tillbaka till fastigheter</button></a></div></center>
   </section>
