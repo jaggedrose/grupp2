@@ -6722,7 +6722,6 @@ th {
 }
 .TrHeader .dataHeader {
   background-color: #e8f69e;
-  width: auto;
 }
 .dataHeader:first-letter {
   text-transform: uppercase;
