@@ -6707,6 +6707,11 @@ th {
   border: 1px solid #dddddd;
   border-radius: 14px;
 }
+@media (max-width: 530px) {
+  .detaljBostadTable {
+    font-size: 90%;
+  }
+}
 .TrHeader .dataHeader {
   background-color: #e8f69e;
 }
@@ -6719,6 +6724,9 @@ th {
   line-height: 20px;
   background-color: #fcfbf9;
   padding: 8px 0 0 8px;
+}
+.table-responsive {
+  border: 0px solid #ffffff;
 }
 @media (max-width: 530px) {
   .hideMe {
