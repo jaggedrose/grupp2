@@ -6713,7 +6713,7 @@ th {
   }
 }
 .table {
-  width: auto;
+  width: 100%;
 }
 .TrHeader .dataHeader {
   background-color: #e8f69e;
@@ -6736,7 +6736,7 @@ th {
 }
 @media (max-width: 530px) {
   .bostadContent {
-    width: 330px;
+    width: auto;
   }
 }
 .table-responsive {
