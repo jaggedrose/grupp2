@@ -6699,12 +6699,6 @@ th {
 .propertyCarousel .carousel-control.right {
   background: none;
 }
-@media (max-width: 530px) {
-  .propertyCarousel {
-    width: 350px;
-    margin-left: -10px;
-  }
-}
 .backToBtn {
   background-color: #75890c;
   color: #ffffff;
