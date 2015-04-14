@@ -6709,7 +6709,7 @@ th {
 }
 @media (max-width: 530px) {
   .detaljBostadTable {
-    font-size: 88%;
+    font-size: 75%;
   }
 }
 .table {
