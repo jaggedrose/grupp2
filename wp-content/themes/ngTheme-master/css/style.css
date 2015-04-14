@@ -6713,7 +6713,7 @@ th {
   }
 }
 .table {
-  width: 100%;
+  width: ;
 }
 @media (max-width: 530px) {
   .table {

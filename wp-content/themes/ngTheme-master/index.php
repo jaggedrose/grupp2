@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- base href must correspond to the base path of your wordpress site -->
   <link rel="stylesheet" href="<?php echo(THEME_HTTP_ROOT)?>js/libs/ui-bootstrap-tpls-0.12.1.js">
  
