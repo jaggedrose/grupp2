@@ -6701,7 +6701,13 @@ th {
 .detaljBostadTable {
   border: 1px solid #dddddd;
   border-radius: 4px;
-  width: 100%;
+  max-width: 100%;
+  margin-right: 5px;
+}
+@media (max-width: 480px) {
+  .detaljBostadTable {
+    max-width: 90%;
+  }
 }
 .TrHeader .dataHeader {
   background-color: #e8f69e;
