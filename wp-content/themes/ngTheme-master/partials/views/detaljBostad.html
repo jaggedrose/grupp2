@@ -12,7 +12,7 @@
         <td ng-repeat="(key,val) in bostad.bostadData" ng-class="{badkar: 'hideMe'}[key]">{{val}}</td>
       </tr>
     </table> -->
-        <carousel interval="carouselInterval" class="container-fluid propertyCarousel margin-bottom">
+        <carousel interval="carouselInterval" class="container-fluid propertyCarousel">
         <slide ng-repeat="media in bostad.media" active="media.active">
           <img ng-src="{{media.source}}" class="img-responsive img-rounded">
           <div class="carousel-caption">
@@ -21,7 +21,7 @@
         </slide>
       </carousel>
    <article class="panel panel-default metaData">
-    <ul class="list-group ulData">
+    <ul class="list-group">
       <li class="dataHeader  list-group-item" ng-repeat="(key,val) in bostad.bostadData">
       <strong>{{key | lowercase }}</strong>: {{val}}</li>
     </ul>

@@ -6694,6 +6694,7 @@ th {
 /*Property View*/
 .propertyCarousel img {
   margin: 25px auto 0;
+  width: auto;
 }
 .propertyCarousel .carousel-control.left,
 .propertyCarousel .carousel-control.right {
@@ -6703,18 +6704,9 @@ th {
   background-color: #75890c;
   color: #ffffff;
 }
-.detaljBostadTable {
-  border: 1px solid #dddddd;
-  border-radius: 14px;
-}
-@media (max-width: 530px) {
-  .detaljBostadTable {
-    font-size: 75%;
-  }
-}
 .metaData {
-  width: 95%;
-  margin-left: 13px;
+  width: 94%;
+  margin: 2px auto 15px;
 }
 .metaData .dataHeader {
   background-color: #e8f69e;
