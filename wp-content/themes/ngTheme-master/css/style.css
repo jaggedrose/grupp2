@@ -6715,14 +6715,14 @@ th {
 .table {
   width: 100%;
 }
+@media (max-width: 530px) {
+  .table {
+    width: auto;
+  }
+}
 .TrHeader .dataHeader {
   background-color: #e8f69e;
   width: auto;
-}
-@media (max-width: 530px) {
-  .TrHeader {
-    padding: 0 0 0 0;
-  }
 }
 .dataHeader:first-letter {
   text-transform: uppercase;

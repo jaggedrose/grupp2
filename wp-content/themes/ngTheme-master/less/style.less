@@ -219,8 +219,10 @@ th {
 }
 
 .table {
-  
   width:100%;
+      @media(max-width: 530px){
+      width:auto;
+      }
 }
 
 .TrHeader{
@@ -228,9 +230,6 @@ th {
     background-color:@main-color-lighten;
    width:auto;
   } 
-  @media(max-width: 530px){
-  padding:0 0 0 0;
-  }
 }
 
 .dataHeader:first-letter{
