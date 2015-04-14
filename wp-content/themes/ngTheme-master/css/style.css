@@ -6693,7 +6693,7 @@ th {
 }
 /*Property View*/
 .propertyCarousel img {
-  margin: 15px auto 0;
+  margin: 25px auto 0;
 }
 .propertyCarousel .carousel-control.left,
 .propertyCarousel .carousel-control.right {
@@ -6712,15 +6712,11 @@ th {
     font-size: 75%;
   }
 }
-.table {
-  width: 100%;
+.metaData {
+  width: 95%;
+  margin-left: 13px;
 }
-@media (max-width: 530px) {
-  .table {
-    width: 95%;
-  }
-}
-.TrHeader .dataHeader {
+.metaData .dataHeader {
   background-color: #e8f69e;
 }
 .dataHeader:first-letter {
@@ -6728,7 +6724,6 @@ th {
 }
 .bostadContent {
   margin: 15px 5px 5px 0;
-  float: left;
   line-height: 20px;
   background-color: #fcfbf9;
   padding: 8px 0 0 8px;
@@ -6737,9 +6732,6 @@ th {
   .bostadContent {
     width: auto;
   }
-}
-.table-responsive {
-  border: 0px solid #ffffff;
 }
 @media (max-width: 530px) {
   .hideMe {
