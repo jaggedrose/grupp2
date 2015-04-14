@@ -6719,7 +6719,7 @@ th {
   text-transform: uppercase;
 }
 .bostadContent {
-  margin-top: 15px;
+  margin: 15px 5px 5px 0;
   float: left;
   line-height: 20px;
   background-color: #fcfbf9;
