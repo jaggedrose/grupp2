@@ -6662,7 +6662,7 @@ nav {
 }
 @media (max-width: 768px) {
   .img-thumbnail {
-    width: 90px;
+    width: 85px;
   }
 }
 th {
@@ -6704,6 +6704,12 @@ th {
   .bostadGoBtn {
     margin: 15px auto 0;
     padding: 20px 10px;
+  }
+}
+@media (max-width: 450px) {
+  .bostadGoBtn {
+    margin: 30px 0 0 0;
+    padding: 2px 3px 1px 4px;
   }
 }
 @media (max-width: 768px) {
