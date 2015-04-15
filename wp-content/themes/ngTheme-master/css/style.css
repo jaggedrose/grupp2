@@ -6660,7 +6660,7 @@ nav {
   margin: 4px auto 0;
   max-width: 175px !important;
 }
-@media (max-width: 400px) {
+@media (max-width: 768px) {
   .img-thumbnail {
     width: 90px;
   }
@@ -6683,23 +6683,30 @@ th {
 .bostadTableTitle {
   background-color: #fcfbf9;
   font-weight: bold;
-  font-size: 100%;
   color: #75890c;
 }
 .bostadTitle {
   width: 250px;
+}
+@media (max-width: 768px) {
+  .bostadTitle {
+    width: auto;
+  }
 }
 .bostadGoBtn {
   background-color: #75890c;
   color: #ffffff;
   margin-top: 55px;
   margin-right: 6px;
-  padding-top: 23px;
-  padding-bottom: 23px;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding: 23px 12px 23px 12px;
 }
-@media (max-width: 750px) {
+@media (max-width: 768px) {
+  .bostadGoBtn {
+    margin: 15px auto 0;
+    padding: 20px 10px;
+  }
+}
+@media (max-width: 768px) {
   .thingbob {
     display: none;
   }
