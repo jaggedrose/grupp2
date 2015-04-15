@@ -6602,7 +6602,12 @@ nav {
   font-size: 25px;
 }
 .navbar-default {
-  padding-left: 90px;
+  padding-left: 120px;
+}
+@media (max-width: 768px) {
+  .navbar-default {
+    padding-left: 0;
+  }
 }
 .navbar-default .navbar-nav > li > a {
   color: #966c36;
@@ -6614,6 +6619,11 @@ nav {
   overflow: hidden;
   margin-top: 30px;
 }
+@media (max-width: 992px) {
+  .frontCarousel {
+    width: 100%;
+  }
+}
 .frontCarousel .carousel-control.left,
 .frontCarousel .carousel-control.right {
   background: none;
@@ -6621,7 +6631,7 @@ nav {
 .homeTitle {
   margin: 50px;
 }
-@media (max-width: 990px) {
+@media (max-width: 992px) {
   .homeTitle {
     padding-bottom: 30px;
     border-bottom: 1px solid #777777;
@@ -6633,13 +6643,16 @@ nav {
   padding: 6px 20px 10px;
   min-height: 265px;
 }
-@media (max-width: 990px) {
+@media (max-width: 992px) {
   .textBox div {
     border: none;
     border-radius: 0;
     border-bottom: 1px solid #777777;
     min-height: initial;
   }
+}
+.textBox a {
+  color: #000;
 }
 /*Property List View*/
 .img-thumbnail {
@@ -6764,9 +6777,6 @@ th {
   margin: 20px auto;
 }
 /*Used here & there*/
-.margin_auto {
-  margin: auto;
-}
 .center {
   text-align: center;
 }
@@ -6778,6 +6788,5 @@ carousel {
   overflow: hidden;
 }
 .container {
-  margin-bottom: 20px;
-  margin: 0 auto;
+  margin: 0 auto 20px;
 }

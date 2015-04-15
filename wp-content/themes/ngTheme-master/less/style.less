@@ -31,27 +31,33 @@ h2.about {
 h2.google {
   margin-bottom: 20px;
 }
+
 h2.salu {
   margin-bottom: 38px;
 }
+
 
 /* Sticky footer */
 html, body {
   height: 100%;
 }
+
 main {
   min-height: 100%;
   /* equal to footer height */
   margin-bottom: -142px; 
   margin-top:15px;
 }
+
 main:after {
   content: "";
   display: block;
 }
+
 footer, main:after {
   height: 142px;
 }
+
 footer {
   background-color: @main-color;
 
@@ -83,11 +89,15 @@ nav {
 }
 
 .navbar-default {
-  padding-left:90px;
-  .navbar-nav > li > a {
+  padding-left: 120px;
 
-  color: #966c36;
-  //text-transform:uppercase;
+  @media (max-width: 768px) {
+    padding-left: 0;
+  }
+
+  .navbar-nav > li > a {
+    color: #966c36;
+    //text-transform:uppercase;
   }
 
 }
@@ -101,6 +111,10 @@ nav {
   overflow: hidden;
   margin-top: 30px;
 
+  @media (max-width: 992px){
+    width: 100%;
+  }
+
   .carousel-control.left, .carousel-control.right {
     background: none;
   }
@@ -109,7 +123,7 @@ nav {
 .homeTitle {
   margin: 50px;
 
-  @media (max-width: 990px){
+  @media (max-width: 992px){
     padding-bottom: 30px;
     border-bottom: 1px solid @border-dark-grey;
   }
@@ -122,13 +136,17 @@ nav {
     padding: 6px 20px 10px;
     min-height: 265px;
 
-    @media (max-width: 990px) {
+    @media (max-width: 992px) {
       border: none;
       border-radius: 0;
       border-bottom: 1px solid @border-dark-grey;
       min-height: initial;
     }
   }
+
+  a {
+      color: #000;
+    }
 }
 
 
@@ -289,10 +307,6 @@ th {
 
 
 /*Used here & there*/
-.margin_auto {
-  margin:auto;
-}
-
 .center {
   text-align: center
 }
@@ -307,6 +321,5 @@ carousel {
 }
 
 .container {
-  margin-bottom: 20px;
-  margin:0 auto;
+  margin: 0 auto 20px;
 }
